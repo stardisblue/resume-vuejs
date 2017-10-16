@@ -14,9 +14,3 @@
     props: ['header']
   }
 </script>
-
-<style lang="scss">
-  @import '~bulma/sass/utilities/_all.sass';
-  @import '~bulma/sass/layout/hero.sass';
-  @import '~bulma/sass/elements/title.sass';
-</style>

@@ -6,10 +6,9 @@
   "basics": {
     "name": "Fati CHEN",
     "label": "Développeur",
-    "picture": "!!!!!!!",
     "email": "fati.chen@gmail.com",
     "phone": "0652677946",
-    "website": "http://stardis.blue",
+    "website": "https://stardis.blue",
     "summary": "",
     "location": {
       "address": "D3 parc de la guirlande",
@@ -19,6 +18,11 @@
       "region": ""
     },
     "profiles": [
+      {
+        "network": "link",
+        "username": "stardis.blue",
+        "url": "https://stardis.blue/"
+      },
       {
         "network": "github",
         "username": "stardisblue",
@@ -31,127 +35,6 @@
       }
     ]
   },
-  "work": [
-    {
-      "company": "UMontpellier & LIRMM ADVANSE",
-      "title": "jGetMove",
-      "type":"projet annuel + stage",
-      "website": "https://github.com/jGetMove/",
-      "startDate": "2017-01-01",
-      "endDate": "2017-07-31",
-      "summary": "Détection de motifs spatio-temporels : extrait des motifs de déplacement des membres d'un groupe en fonction du temps. Conversion et amelioration de l'algorithme depuis le C++.",
-      "mission": "Développement de l'algorithme principal, mise en place de l'architecture, gestion du git, rédaction de la documentation en anglais, mise en place des test unitaires",
-      "gain": "Compréhension des stratégies de parcours de graphe, logique récursive, compréhension des algorithmes mathématiques, analyse de grande quantité de données",
-      "tools": [
-        "gestion sémantique de version (GIT + SemVer)",
-        "Java",
-        "tests unitaires (Junit4)"
-      ]
-    },
-    {
-      "company": "UMontpellier",
-      "title": "E-Swipe",
-      "website": "https://github.com/e-swipe/",
-      "startDate": "2017-01-01",
-      "endDate": "2017-05-01",
-      "summary": "Application android de rencontre et api serveur.",
-      "mission": "Conception du modèle de données, de l'API REST, du backend.",
-      "gain": "Compréhension du fonctionnement d'une API REST, principe d'authentification OAuth2 , optimisation des échanges de données et déploiment de l'application client/serveur.",
-      "tools": [
-        "GIT + SemVer",
-        "Android",
-        "nginx",
-        "PHP7.1",
-        "PostgreSQL",
-        "CakePHP"
-      ]
-    },
-    {
-      "company": "UMontpellier & LIRMM MAORE",
-      "title": "EternityII",
-      "type":"projet annuel + stage",
-      "website": "http://www.lirmm.fr/",
-      "startDate": "2015-10-1",
-      "endDate": "2016-07-31",
-      "summary": "Jeu de réflexion dont la solution est combinatoire. Étude et mise en place de stratégies de résolution variés se basant notamment sur le pré-calcul d'instances simplifiées",
-      "mission": "Mise en place de stratégies de résolution d'un problème combinatoire. Création d'une suite d'application testant différentes stratégies de résolution, dont une permettant la combinaison d'approches.",
-      "gain": "Compréhension des approches de parcours de graphe, d'algorithme récursifs et d'architecture logicielle modulaire.",
-      "tools": [
-        "GIT + SemVer",
-        "C++",
-        "Java",
-        "Python"
-      ]
-    },
-    {
-      "company": "WBS",
-      "title": "Developpeur Web",
-      "website": "",
-      "startDate": "2015-03-10",
-      "endDate": "2015-07-31",
-      "summary": "Logiciel d'<abbr title=\"Progiciel de Gestion Intégré\">ERP</abbr> disponible sur le web.",
-      "mission": "Mise à jour du design et de l'architecture logicielle, mise en place de mise à jour dynamiques (ajax) et connexion avec une API SOAP",
-      "gain": "Compréhension de la complexité d'une codebase, perfectionnement dans les mises à jour dynamiques coté client et dans l'emploi d'une API SOAP",
-      "tools": [
-        "GIT",
-        "PHP5.5",
-        "JavaScript",
-        "jQuery",
-        "websocket/webservices"
-      ]
-    }
-  ],
-  "volunteer": [],
-  "education": [
-    {
-      "institution": "UMontpellier",
-      "area": "Informatique",
-      "studyType": "Master",
-      "startDate": "2016-09-01",
-      "endDate": "2018-07-30",
-      "gpa": "",
-      "courses": [
-        "architecture logicielle",
-        "extraction de données",
-        "android",
-        "programmation agent",
-        "web sémantique"
-      ]
-    },
-    {
-      "institution": "UMontpellier",
-      "area": "Informatique",
-      "studyType": "Licence",
-      "startDate": "2015-09-01",
-      "endDate": "2016-07-30",
-      "gpa": "",
-      "courses": [
-        "architecture logicielle",
-        "parcours de graphe",
-        "algorithmes de résolution"
-      ]
-    },
-    {
-      "institution": "IUT de Montpellier",
-      "area": "Informatique de gestion",
-      "studyType": "DUT",
-      "startDate": "2013-09-01",
-      "endDate": "2015-07-30",
-      "gpa": "",
-      "courses": []
-    },
-    {
-      "institution": "Lycee Daudet",
-      "area": "Scientifique",
-      "studyType": "Baccalaureat",
-      "startDate": "2010-01-01",
-      "endDate": "2012-01-01",
-      "gpa": "",
-      "courses": []
-    }
-  ],
-  "awards": [],
-  "publications": [],
   "skills": [
     {
       "name": "Web",
@@ -159,14 +42,13 @@
       "value": 8,
       "level": "confirmé",
       "keywords": [
-        "html",
-        "css",
-        "js",
-        "nodejs",
         "vuejs",
         "laravel",
         "cakephp",
-        "symfony"
+        "symfony",
+        "html",
+        "css",
+        "js"
       ]
     },
     {
@@ -185,6 +67,7 @@
       "value": 6,
       "level": "avancé",
       "keywords": [
+        "nodejs",
         "java",
         "c++",
         "python",
@@ -204,18 +87,185 @@
       ]
     }
   ],
+  "work": [
+    {
+      "type": "projet annuel + stage",
+      "title": "jGetMove",
+      "summary": "Détection de motifs spatio-temporels : extraction de motifs de déplacement des membres d'un groupe en fonction du temps. Conversion et amélioration de l'algorithme depuis le C++.",
+      "company": "UMontpellier & LIRMM ADVANSE",
+      "startDate": "2017-01-01",
+      "endDate": "2017-07-31",
+      "website": {
+        "type": "github",
+        "url": "https://github.com/jGetMove/",
+        "text": "jGetMove"
+      },
+      "content": [
+        {
+          "icon": "fa-check",
+          "text": "Algorithme principal, conception de l'architecture, gestion du git, rédaction de la doc. en anglais."
+        },
+        {
+          "icon": "fa-plus",
+          "text": "Stratégies de parcours de graphe, logique récursive, algorithmes mathématiques, analyse de grandes quantité de données."
+        }
+      ],
+      "keywords": [
+        "gestion sémantique de version (GIT + SemVer)",
+        "Java",
+        "tests unitaires (Junit4)"
+      ]
+    },
+    {
+      "title": "E-Swipe",
+      "summary": "Application android de rencontre et API serveur.",
+      "company": "UMontpellier",
+      "startDate": "2017-01-01",
+      "endDate": "2017-05-01",
+      "website": {
+        "type": "github",
+        "url": "https://github.com/e-swipe/",
+        "text": "e-swipe"
+      },
+      "content": [
+        {
+          "icon": "fa-check",
+          "text": "Modèle de données, l'API REST, backend et serveur."
+        },
+        {
+          "icon": "fa-plus",
+          "text": "API REST, authentification OAuth2, optimisation des échanges de données et déploiement de l'application côté client et serveur."
+        }
+      ],
+      "keywords": [
+        "GIT + SemVer",
+        "Android",
+        "nginx",
+        "PHP7.1",
+        "PostgreSQL",
+        "CakePHP",
+        "REST"
+      ]
+    },
+    {
+      "type": "projet annuel + stage",
+      "title": "EternityII",
+      "summary": "Jeu de réflexion dont la solution est combinatoire. Étude et mise en place de stratégies de résolution variés se basant notamment sur le pré-calcul d'instances simplifiées.",
+      "company": "UMontpellier & LIRMM MAORE",
+      "startDate": "2015-10-1",
+      "endDate": "2016-07-31",
+      "website": {
+        "type": "github",
+        "url": "https://github.com/EternityII",
+        "text": "EternityII"
+      },
+      "content": [
+        {
+          "icon": "fa-check",
+          "text": "Stratégies de résolution d'un problème combinatoire, en testant différentes stratégies de résolution, dont une permettant la combinaison d'approches."
+        },
+        {
+          "icon": "fa-plus",
+          "text": "Stratégies de parcours de graphe, d'algorithme récursifs et architecture logicielle modulaire."
+        }
+      ],
+      "keywords": [
+        "GIT + SemVer",
+        "C++",
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "title": "Developpeur Web",
+      "summary": "Logiciel d'<abbr title=\"Progiciel de Gestion Intégré\">ERP</abbr> disponible sur le web.",
+      "company": "WBS",
+      "startDate": "2015-03-10",
+      "endDate": "2015-07-31",
+      "website": null,
+      "content": [
+        {
+          "icon": "fa-check",
+          "text": "Design, architecture logicielle, implémentation de mises à jour dynamiques (ajax) et de connexion à une API SOAP."
+        },
+        {
+          "icon": "fa-plus",
+          "text": "Perfectionnement dans l'utilisation d'ajax et dans l'emploi d'une API SOAP."
+        }
+      ],
+      "keywords": [
+        "GIT",
+        "PHP5.5",
+        "JavaScript",
+        "jQuery",
+        "websocket/webservices",
+        "SOAP"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Université de Montpellier",
+      "area": "Informatique",
+      "studyType": "Master",
+      "startDate": "2016-09-01",
+      "endDate": "2018-07-30",
+      "gpa": "",
+      "keywords": [
+        "architecture logicielle",
+        "extraction de données",
+        "android",
+        "programmation agent",
+        "web sémantique"
+      ]
+    },
+    {
+      "institution": "Université de Montpellier",
+      "area": "Informatique",
+      "studyType": "Licence",
+      "startDate": "2015-09-01",
+      "endDate": "2016-07-30",
+      "gpa": "",
+      "keywords": [
+        "architecture logicielle",
+        "parcours de graphe",
+        "algorithmes de résolution"
+      ]
+    },
+    {
+      "institution": "IUT de Montpellier",
+      "area": "Informatique de gestion",
+      "studyType": "DUT",
+      "startDate": "2013-09-01",
+      "endDate": "2015-07-30",
+      "gpa": "",
+      "keywords": []
+    },
+    {
+      "institution": "Lycee Daudet",
+      "area": "Scientifique",
+      "studyType": "Baccalaureat",
+      "startDate": "",
+      "endDate": "2012-06-01",
+      "gpa": "",
+      "keywords": []
+    }
+  ],
+  "volunteer": [],
+  "awards": [],
+  "publications": [],
   "languages": [
     {
       "language": "Russe",
-      "fluency": "master"
+      "fluency": "Maternelle"
     },
     {
       "language": "Anglais",
-      "fluency": "advanced"
+      "fluency": "Courant"
     },
     {
       "language": "Allemand",
-      "fluency": "beginner"
+      "fluency": "Notions"
     }
   ],
   "interests": [

@@ -1,9 +1,9 @@
 <template>
-  <section class="section is-small">
+  <section class="section">
     <div class="container">
       <div class="tabs is-medium ">
         <ul>
-          <li class="is-active"><a>Compétences</a></li>
+          <li class="is-active"><h2><a>Compétences</a></h2></li>
         </ul>
       </div>
       <div class="columns is-variable is-1">
@@ -32,7 +32,6 @@
 </script>
 <style lang="scss">
   @import '~bulma/sass/utilities/_all.sass';
-  @import '~bulma/sass/base/_all.sass';
   @import '~bulma/sass/elements/progress.sass';
 
   .progress.is-tiny {

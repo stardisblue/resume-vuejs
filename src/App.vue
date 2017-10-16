@@ -51,7 +51,7 @@
 </script>
 
 <style lang="scss">
-  //@import '~font-awesome/css/font-awesome.css';
+  @import '~font-awesome/css/font-awesome.css';
   $section-padding: 0.5rem 1.5rem;
   $tabs-border-bottom-width: 2px;
   $tabs-link-padding: 0 2rem 0 1rem;

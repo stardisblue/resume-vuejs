@@ -34,7 +34,8 @@
   "work": [
     {
       "company": "UMontpellier & LIRMM ADVANSE",
-      "position": "jGetMove, projet annuel + stage",
+      "title": "jGetMove",
+      "type":"projet annuel + stage",
       "website": "https://github.com/jGetMove/",
       "startDate": "2017-01-01",
       "endDate": "2017-07-31",
@@ -49,7 +50,7 @@
     },
     {
       "company": "UMontpellier",
-      "position": "E-Swipe",
+      "title": "E-Swipe",
       "website": "https://github.com/e-swipe/",
       "startDate": "2017-01-01",
       "endDate": "2017-05-01",
@@ -67,7 +68,8 @@
     },
     {
       "company": "UMontpellier & LIRMM MAORE",
-      "position": "EternityII, projet annuel + stage",
+      "title": "EternityII",
+      "type":"projet annuel + stage",
       "website": "http://www.lirmm.fr/",
       "startDate": "2015-10-1",
       "endDate": "2016-07-31",
@@ -83,7 +85,7 @@
     },
     {
       "company": "WBS",
-      "position": "Developpeur Web",
+      "title": "Developpeur Web",
       "website": "",
       "startDate": "2015-03-10",
       "endDate": "2015-07-31",

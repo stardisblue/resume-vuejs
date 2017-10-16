@@ -52,10 +52,13 @@
 
 <style lang="scss">
   @import '~font-awesome/css/font-awesome.css';
+
+  $body-size: 15px;
   $section-padding: 0.5rem 1.5rem;
   $tabs-border-bottom-width: 2px;
   $tabs-link-padding: 0 2rem 0 1rem;
   $tag-radius: 0;
+
 
   @import '~bulma/sass/utilities/_all.sass';
   @import '~bulma/sass/base/_all.sass';
@@ -63,16 +66,24 @@
   @import '~bulma/sass/grid/columns.sass';
   @import '~bulma/sass/elements/container.sass';
   @import '~bulma/sass/elements/tag.sass';
+  @import '~bulma/sass/elements/icon.sass';
   @import '~bulma/sass/layout/section.sass';
+
+  .tabs.is-medium {
+    margin-bottom: 0.5em;
+  }
 
   .tag.is-tiny {
     height: 1.75em;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
   }
 
   .tags .tag.is-tiny:not(:last-child) {
-    margin-right: 0.3rem;
+    margin-right: 0.2rem;
   }
 
+  .content:not(:last-child) {
+    margin-bottom: 0;
+  }
 </style>

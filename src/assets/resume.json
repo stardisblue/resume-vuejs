@@ -1,0 +1,224 @@
+{
+  "header": {
+    "title": "Devellopeur",
+    "subtitle": "Fevrier - juillet"
+  },
+  "basics": {
+    "name": "Fati CHEN",
+    "label": "Développeur",
+    "picture": "!!!!!!!",
+    "email": "fati.chen@gmail.com",
+    "phone": "0652677946",
+    "website": "http://stardis.blue",
+    "summary": "",
+    "location": {
+      "address": "D3 parc de la guirlande",
+      "postalCode": "34070",
+      "city": "Montpellier",
+      "countryCode": "France",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "github",
+        "username": "stardisblue",
+        "url": "https://github.com/stardisblue"
+      },
+      {
+        "network": "linkedin",
+        "username": "fati-chen",
+        "url": "https://www.linkedin.com/in/fati-chen/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "UMontpellier & LIRMM ADVANSE",
+      "position": "jGetMove, projet annuel + stage",
+      "website": "https://github.com/jGetMove/",
+      "startDate": "2017-01-01",
+      "endDate": "2017-07-31",
+      "summary": "Détection de motifs spatio-temporels : extrait des motifs de déplacement des membres d'un groupe en fonction du temps. Conversion et amelioration de l'algorithme depuis le C++.",
+      "mission": "Développement de l'algorithme principal, mise en place de l'architecture, gestion du git, rédaction de la documentation en anglais, mise en place des test unitaires",
+      "gain": "Compréhension des stratégies de parcours de graphe, logique récursive, compréhension des algorithmes mathématiques, analyse de grande quantité de données",
+      "tools": [
+        "gestion sémantique de version (GIT + SemVer)",
+        "Java",
+        "tests unitaires (Junit4)"
+      ]
+    },
+    {
+      "company": "UMontpellier",
+      "position": "E-Swipe",
+      "website": "https://github.com/e-swipe/",
+      "startDate": "2017-01-01",
+      "endDate": "2017-05-01",
+      "summary": "Application android de rencontre et api serveur.",
+      "mission": "Conception du modèle de données, de l'API REST, du backend.",
+      "gain": "Compréhension du fonctionnement d'une API REST, principe d'authentification OAuth2 , optimisation des échanges de données et déploiment de l'application client/serveur.",
+      "tools": [
+        "GIT + SemVer",
+        "Android",
+        "nginx",
+        "PHP7.1",
+        "PostgreSQL",
+        "CakePHP"
+      ]
+    },
+    {
+      "company": "UMontpellier & LIRMM MAORE",
+      "position": "EternityII, projet annuel + stage",
+      "website": "http://www.lirmm.fr/",
+      "startDate": "2015-10-1",
+      "endDate": "2016-07-31",
+      "summary": "Jeu de réflexion dont la solution est combinatoire. Étude et mise en place de stratégies de résolution variés se basant notamment sur le pré-calcul d'instances simplifiées",
+      "mission": "Mise en place de stratégies de résolution d'un problème combinatoire. Création d'une suite d'application testant différentes stratégies de résolution, dont une permettant la combinaison d'approches.",
+      "gain": "Compréhension des approches de parcours de graphe, d'algorithme récursifs et d'architecture logicielle modulaire.",
+      "tools": [
+        "GIT + SemVer",
+        "C++",
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "company": "WBS",
+      "position": "Developpeur Web",
+      "website": "",
+      "startDate": "2015-03-10",
+      "endDate": "2015-07-31",
+      "summary": "Logiciel d'<abbr title=\"Progiciel de Gestion Intégré\">ERP</abbr> disponible sur le web.",
+      "mission": "Mise à jour du design et de l'architecture logicielle, mise en place de mise à jour dynamiques (ajax) et connexion avec une API SOAP",
+      "gain": "Compréhension de la complexité d'une codebase, perfectionnement dans les mises à jour dynamiques coté client et dans l'emploi d'une API SOAP",
+      "tools": [
+        "GIT",
+        "PHP5.5",
+        "JavaScript",
+        "jQuery",
+        "websocket/webservices"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "UMontpellier",
+      "area": "Informatique",
+      "studyType": "Master",
+      "startDate": "2016-09-01",
+      "endDate": "2018-07-30",
+      "gpa": "",
+      "courses": [
+        "architecture logicielle",
+        "extraction de données",
+        "android",
+        "programmation agent",
+        "web sémantique"
+      ]
+    },
+    {
+      "institution": "UMontpellier",
+      "area": "Informatique",
+      "studyType": "Licence",
+      "startDate": "2015-09-01",
+      "endDate": "2016-07-30",
+      "gpa": "",
+      "courses": [
+        "architecture logicielle",
+        "parcours de graphe",
+        "algorithmes de résolution"
+      ]
+    },
+    {
+      "institution": "IUT de Montpellier",
+      "area": "Informatique de gestion",
+      "studyType": "DUT",
+      "startDate": "2013-09-01",
+      "endDate": "2015-07-30",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "Lycee Daudet",
+      "area": "Scientifique",
+      "studyType": "Baccalaureat",
+      "startDate": "2010-01-01",
+      "endDate": "2012-01-01",
+      "gpa": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Web",
+      "class": "is-success",
+      "value": 8,
+      "level": "confirmé",
+      "keywords": [
+        "html",
+        "css",
+        "js",
+        "nodejs",
+        "vuejs",
+        "laravel",
+        "cakephp",
+        "symfony"
+      ]
+    },
+    {
+      "name": "Mobile",
+      "class": "is-link",
+      "level": "intermediaire",
+      "value": 4,
+      "keywords": [
+        "android",
+        "cordova"
+      ]
+    },
+    {
+      "name": "Application",
+      "class": "is-info",
+      "value": 6,
+      "level": "avancé",
+      "keywords": [
+        "java",
+        "c++",
+        "python",
+        "kotlin"
+      ]
+    },
+    {
+      "name": "Gestion",
+      "class": "is-success",
+      "value": 8,
+      "level": "confirmé",
+      "keywords": [
+        "git",
+        "scrum",
+        "agile",
+        "serveur"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Russe",
+      "fluency": "master"
+    },
+    {
+      "language": "Anglais",
+      "fluency": "advanced"
+    },
+    {
+      "language": "Allemand",
+      "fluency": "beginner"
+    }
+  ],
+  "interests": [
+    "échecs",
+    "escalade"
+  ],
+  "references": []
+}

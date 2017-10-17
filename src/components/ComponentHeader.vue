@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs is-medium">
+  <div class="tabs is-medium is-narrow">
     <ul>
       <h2>
         <li><a>{{title}}</a></li>
@@ -13,7 +13,5 @@
   }
 </script>
 <style lang="scss">
-  .tabs.is-medium {
-    margin-bottom: 0.5em;
-  }
+
 </style>

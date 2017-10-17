@@ -1,5 +1,5 @@
 <template>
-  <div class="card-content">
+  <div class="card-content is-narrow">
     <component-header :title="basics.name"></component-header>
     <p><span class="icon"><i class="fa fa-map-marker"></i></span>{{basics.location.address}}<br>
       <span class="icon"><i class="fa"></i></span>{{basics.location.postalCode}}, {{basics.location.city}}</p>
@@ -38,8 +38,3 @@
     components: {ComponentHeader}
   }
 </script>
-<style>
-  .card-content {
-    padding: 0.5rem;
-  }
-</style>

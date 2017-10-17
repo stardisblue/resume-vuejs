@@ -1,5 +1,5 @@
 <template>
-  <div class="card-content">
+  <div class="card-content is-narrow">
     <component-header title="Langues"></component-header>
 
     <table class="table is-fullwidth">
@@ -25,8 +25,3 @@
     }
   }
 </script>
-<style>
-  .languages {
-    margin-top: 0.5rem;
-  }
-</style>

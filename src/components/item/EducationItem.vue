@@ -8,9 +8,9 @@
         <span class="has-text-grey"> | {{item.institution}}</span>
       </span>
     </div>
-    <div class="item-body">
+    <div class="item-body" v-if="item.keywords.length > 0">
       <ul class="tags">
-        <li v-for="keyword in item.keywords" class="tag is-tiny is-info">{{keyword}}</li>
+        <li v-for="keyword in item.keywords" class="tag is-small is-info">{{keyword}}</li>
       </ul>
     </div>
   </div>

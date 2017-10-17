@@ -25,7 +25,7 @@
       </ul>
 
       <ul class="tags">
-        <li v-for="keyword in item.keywords" class="tag is-tiny is-info">{{keyword}}</li>
+        <li v-for="keyword in item.keywords" class="tag is-small is-info">{{keyword}}</li>
       </ul>
     </div>
   </div>

@@ -1,9 +1,9 @@
 <template>
-  <div class="card-content">
+  <div class="card-content is-narrow">
     <component-header title="Intérêts"></component-header>
 
     <div class="tags">
-      <div  v-for="interest in interests" class="tag is-success">{{interest}}</div>
+      <div v-for="interest in interests" class="tag is-success">{{interest}}</div>
     </div>
   </div>
 </template>
@@ -20,6 +20,3 @@
     }
   }
 </script>
-<style>
-
-</style>

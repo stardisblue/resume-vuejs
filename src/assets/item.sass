@@ -1,0 +1,129 @@
+$item-margin-bottom: 2rem !default
+$item-header-margin-bottom: 1rem !default
+$item-header-date-padding-right: 1.5rem !default
+$item-header-hide-line: 1rem !default
+$item-body-size: 1rem !default
+$item-link-label-padding: 1rem !default
+
+$item-blockquote-background-color: #fff9e3 !default
+$item-blockquote-border-left: 5px solid $border !default
+$item-blockquote-padding: 1.25em 1.5em !default
+
+$item-content-margin: 1rem 0 1.5rem 2rem !default
+$item-tags-margin-left: 2rem !default
+
+$print-item-margin-bottom: $default-spacing !default
+$print-item-header-margin-bottom: $narrow-spacing !default
+$print-item-header-date-padding-right: $default-spacing !default
+$print-item-header-hide-line: 1rem !default
+$print-item-body-size: 0.8rem !default
+$print-item-link-label-padding: $narrow-spacing !default
+$print-item-content-icon-height: 0.85rem !default
+
+$print-item-blockquote-background: #fff9e3 !default
+$print-item-blockquote-border-left: 2px solid $border !default
+$print-item-blockquote-padding: 5px 0 5px 10px !default
+
+$print-item-content-margin: 0.2rem 0 0.5rem 2rem !default
+$print-item-tags-margin-left: 2rem !default
+
+.item
+  &:not(:last-child)
+    margin-bottom: $item-margin-bottom
+
+  .item-header
+    position: relative
+    &:not(:last-child)
+      margin-bottom: $item-header-margin-bottom
+
+    .item-header-date
+      padding-right: $default-spacing
+      min-width: 150px
+
+    .item-header-body
+      padding-right: $item-header-hide-line
+      &.is-white
+        background-color: white
+
+    &:after
+      position: absolute
+      left: 0
+      top: .8em
+      height: 1px
+      background: $white-ter
+      content: ""
+      width: 100%
+      z-index: -100
+      display: block
+
+  .item-body
+    font-size: $item-body-size
+    .is-pulled-right
+      margin-left: $item-link-label-padding
+
+    blockquote
+      background-color: $item-blockquote-background-color
+      border-left: $item-blockquote-border-left
+      padding: $item-blockquote-padding
+      margin-bottom: 0
+
+    ul.item-content
+      margin: $item-content-margin
+
+    ul.tags
+      margin-left: $item-tags-margin-left
+
+@media print
+  .item
+    margin-bottom: $print-item-margin-bottom
+
+    &:not(:last-child)
+      margin-bottom: $print-item-margin-bottom
+
+    .item-header
+      position: relative
+      margin-bottom: $print-item-header-margin-bottom
+
+      &:not(:last-child)
+        margin-bottom: $print-item-header-margin-bottom
+
+      .item-header-date
+        padding-right: $default-spacing
+        min-width: 140px
+
+      .item-header-body
+        padding-right: $print-item-header-hide-line
+        &.is-white
+          background-color: white
+
+      &:after
+        position: absolute
+        left: 0
+        top: .8em
+        height: 1px
+        background: $white-ter
+        content: ""
+        width: 100%
+        z-index: -100
+        display: block
+
+    .item-body
+      font-size: $print-item-body-size
+      .is-pulled-right
+        margin-left: $print-item-link-label-padding
+
+      // only in print
+      ul li .icon
+        height: 0.85rem
+
+      blockquote
+        background-color: $print-item-blockquote-background
+        border-left: $print-item-blockquote-border-left
+        padding: $print-item-blockquote-padding
+        margin-bottom: 0
+
+      ul.item-content
+        margin: $print-item-content-margin
+
+    ul.tags
+      margin-left: $print-item-tags-margin-left

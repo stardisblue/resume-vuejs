@@ -1,0 +1,80 @@
+$print-section-padding: 0.5rem 0.5rem 0 0.5rem !default
+$print-font-size: 15px !default
+$print-tag-radius: 0 !default
+
+$print-tabs-border-bottom-width: 2px !default
+$print-tabs-link-padding: 0 2rem 0 1rem !default
+
+$default-spacing: 0.5rem !default
+$narrow-spacing: 0.3rem !default
+
+$print-tags-margin-right: $narrow-spacing !default
+$print-tag-tiny-height: 1.1rem !default
+$print-tag-tiny-padding: 0 0.3rem !default
+
+$print-progress-subtitle: -1rem !default
+$print-progress-margin-bottom: $default-spacing !default
+$print-progress-height: $narrow-spacing !default
+$print-progress-width-redux: 3rem !default
+
+$print-langauges-margin: $default-spacing 0 0 0 !default
+
+$print-card-content-narrow-padding: $default-spacing !default
+
+$print-tabs-narrow-margin: $default-spacing !default
+
+@media print
+  @page
+    margin: 0
+
+  html
+    font-size: 15px
+
+  body
+    -webkit-print-color-adjust: exact
+    print-color-adjust: exact
+
+  .section
+    padding: $print-section-padding
+
+  .tag:not(body)
+    border-radius: $print-tag-radius
+
+  .tabs
+    a
+      border-bottom-width: $print-tabs-border-bottom-width
+      margin-bottom: -#{$print-tabs-border-bottom-width}
+      padding: $print-tabs-link-padding
+    ul
+      border-bottom-width: $print-tabs-border-bottom-width
+
+  .is-paddingless-right
+    padding-right: 0 !important
+
+  .is-paddingless-left
+    padding-left: 0 !important
+
+  .languages
+    margin-top: $print-langauges-margin
+
+  .tag.is-small
+    height: $print-tag-tiny-height
+    padding: $print-tag-tiny-padding
+
+  .tags .tag.is-small
+    margin-right: $print-tags-margin-right
+    &:not(:last-child)
+      margin-right: $print-tags-margin-right
+
+  .progress:not(:last-child).is-small
+    margin-top: $print-progress-subtitle
+    margin-bottom: $print-progress-margin-bottom
+    height: $print-progress-height
+    padding-right: $print-progress-width-redux
+
+  .card-content.is-narrow
+    padding: $print-card-content-narrow-padding
+
+  .tabs:not(:last-child).is-narrow
+    margin-bottom: $print-tabs-narrow-margin
+

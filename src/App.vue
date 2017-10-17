@@ -70,10 +70,9 @@
   $white-ter: #eff0f1
   //$border: #ffeb8e
 
-  $progress-bar-background-color: $white-ter
-  //
   $tag-radius: 0
 
+  $section-padding: 2rem 1.5rem
 
   // text
   $body-family: Arial, "Helvetica Neue", Helvetica, sans-serif

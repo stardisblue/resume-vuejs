@@ -30,5 +30,6 @@
 </script>
 <style lang="sass">
   @import '~bulma/sass/utilities/_all'
+  $progress-bar-background-color: $white-ter
   @import '~bulma/sass/elements/progress'
 </style>

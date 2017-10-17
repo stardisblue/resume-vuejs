@@ -38,7 +38,7 @@
   import Skills from './components/Skills.vue'
   import Work from './components/Work.vue'
 
-  import * as resume from './assets/resume.json'
+  import * as resume from './resume.json'
 
   export default {
     name: 'resume',

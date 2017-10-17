@@ -1,0 +1,89 @@
+{
+  "header": {
+    "title": "",
+    "subtitle": ""
+  },
+  "basics": {
+    "name": "",
+    "label": "",
+    "email": "",
+    "phone": "",
+    "website": "",
+    "summary": "",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "",
+        "username": "",
+        "url": ""
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "",
+      "class": "",
+      "value": 0,
+      "level": "",
+      "keywords": [
+        ""
+      ]
+    }
+  ],
+  "work": [
+    {
+      "type": "",
+      "title": "",
+      "summary": "",
+      "company": "",
+      "startDate": "",
+      "endDate": "",
+      "website": {
+        "type": "",
+        "url": "",
+        "text": ""
+      },
+      "content": [
+        {
+          "icon": "",
+          "text": ""
+        }
+      ],
+      "keywords": [
+        ""
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "",
+      "area": "",
+      "studyType": "",
+      "startDate": "",
+      "endDate": "",
+      "gpa": "",
+      "keywords": [
+        "",
+      ]
+    }
+  ],
+  "volunteer": [],
+  "awards": [],
+  "publications": [],
+  "languages": [
+    {
+      "language": "",
+      "fluency": ""
+    }
+  ],
+  "interests": [
+    ""
+  ],
+  "references": []
+}

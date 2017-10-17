@@ -68,9 +68,12 @@
   $blue: #07C
   $link-active: #3af
   $white-ter: #eff0f1
-  $border: #ffeb8e
+  //$border: #ffeb8e
 
   $progress-bar-background-color: $white-ter
+  //
+  $tag-radius: 0
+
 
   // text
   $body-family: Arial, "Helvetica Neue", Helvetica, sans-serif
@@ -84,7 +87,6 @@
   @import '~bulma/sass/elements/form'
   @import '~bulma/sass/elements/icon'
   @import '~bulma/sass/elements/image'
-  @import '~bulma/sass/elements/progress'
   @import '~bulma/sass/elements/title'
   @import '~bulma/sass/elements/tag'
   @import '~bulma/sass/elements/table'

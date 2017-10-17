@@ -1,0 +1,8 @@
+$schema: http://json-schema.org/draft-06/schema#
+definitions: {}
+id: https://stardis.blue/draft/schema.json
+properties:
+  title:
+    id: /properties/title
+    type: string
+type: object

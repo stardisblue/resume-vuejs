@@ -53,8 +53,8 @@ resume:
           ## two different types of website:
           # website: ""
           website: *external-link
-        startDate: "" # yyyy-mm-dd eg: 1970-01-01
-        endDate: "" # yyyy-mm-dd eg: 2012-12-31
+        startDate: "" # yyyy-mm-dd, can be ommited eg: 1970-01-01
+        endDate: "" # yyyy-mm-dd, can be ommited eg: 2012-12-31
         website: *external-link
         ## three different type of body
         # body: "" # raw text
@@ -75,8 +75,8 @@ resume:
         area: "" # eg: "Computer Science"
         studyType: "" # eg: "Master"
         summary: ""
-        startDate: "" # yyyy-mm-dd
-        endDate: "" # yyyy-mm-dd
+        startDate: "" # yyyy-mm-dd, can be ommited
+        endDate: "" # yyyy-mm-dd, can be ommited
         gpa: "" # score
         keywords: *keywords # can be the courses you took or what you learned
 

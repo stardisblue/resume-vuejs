@@ -6,7 +6,6 @@
         <div class="columns">
           <div class="column is-9 is-paddingless-right">
             <resume-header :header="header"></resume-header>
-            <skills :skills="skills"></skills>
             <education :education="education"></education>
             <work :work="work"></work>
           </div>
@@ -18,6 +17,7 @@
                 </figure>
               </div>
               <basics :basics="basics"></basics>
+              <skills :skills="skills"></skills>
               <languages :languages="languages"></languages>
               <interests :interests="interests"></interests>
             </div>

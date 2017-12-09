@@ -2,8 +2,8 @@
   <div class="item">
     <div class="item-header">
       <span class="item-header-body is-white">
-        <div class="item-header-date is-inline-block is-size-7">
-          <div class="icon"><i class="fa fa-calendar-o"></i></div>{{getDates}}</div>
+        <span class="item-header-date is-inline-block is-size-7">
+          <div class="icon"><i class="fa fa-calendar-o"></i></div>{{getDates}}</span>
         <span class="title is-6">{{item.studyType}} {{item.area}}</span>
         <span class="has-text-grey"> | {{item.institution}}</span>
       </span>
@@ -27,10 +27,9 @@
     computed: {
       getDates: function () {
         if (this.item.startDate !== '') {
-          return moment(this.item.startDate.toString(), ['YYYY-MM-DD']).format('MMM YYYY') + ' - ' +
-            moment(this.item.endDate.toString(), ['YYYY-MM-DD']).format('MMM YYYY')
+          return this.convertDate(this.item.startDate) + ' - ' + this.convertDate(this.item.endDate)
         } else {
-          return moment(this.item.endDate.toString(), ['YYYY-MM-DD']).format('MMM YYYY')
+          return this.convertDate(this.item.endDate)
         }
       }
     },

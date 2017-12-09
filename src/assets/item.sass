@@ -12,8 +12,8 @@ $item-blockquote-padding: 1.25em 1.5em !default
 $item-content-margin: 1rem 0 1.5rem 2rem !default
 $item-tags-margin-left: 2rem !default
 
-$print-item-margin-bottom: $default-spacing !default
-$print-item-header-margin-bottom: $narrow-spacing !default
+$print-item-margin-bottom: $narrow-spacing !default
+$print-item-header-margin-bottom: 0 !default
 $print-item-header-date-padding-right: $default-spacing !default
 $print-item-header-hide-line: 1rem !default
 $print-item-body-size: 0.8rem !default
@@ -24,8 +24,8 @@ $print-item-blockquote-background: #fff9e3 !default
 $print-item-blockquote-border-left: 2px solid #ffeb8e !default
 $print-item-blockquote-padding: 5px 0 5px 10px !default
 
-$print-item-content-margin: 0.2rem 0 0.5rem 2rem !default
-$print-item-tags-margin-left: 2rem !default
+$print-item-content-margin: 0.2rem 0 0.5rem 1rem !default
+$print-item-tags-margin-left: 1rem !default
 
 .item
   &:not(:last-child)
@@ -125,5 +125,5 @@ $print-item-tags-margin-left: 2rem !default
       ul.item-content
         margin: $print-item-content-margin
 
-    ul.tags
-      margin-left: $print-item-tags-margin-left
+      ul.tags
+        margin-left: $print-item-tags-margin-left

@@ -24,7 +24,7 @@ $print-item-blockquote-background: #fff9e3 !default
 $print-item-blockquote-border-left: 2px solid #ffeb8e !default
 $print-item-blockquote-padding: 5px 0 5px 10px !default
 
-$print-item-content-margin: 0.2rem 0 0.5rem 1rem !default
+$print-item-content-margin: 0.2rem 0 0.2rem 1rem !default
 $print-item-tags-margin-left: 1rem !default
 
 .item
@@ -75,10 +75,10 @@ $print-item-tags-margin-left: 1rem !default
 
 @media print
   .item
-    margin-bottom: $print-item-margin-bottom
+    margin-bottom: 0
 
     &:not(:last-child)
-      margin-bottom: $print-item-margin-bottom
+      margin-bottom: 0
 
     .item-header
       position: relative

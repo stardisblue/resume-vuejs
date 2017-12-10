@@ -1,4 +1,4 @@
-$print-section-padding: 0.5rem 0.5rem 0 0.5rem !default
+$print-section-padding: 0rem 0.5rem 0 0.5rem !default
 $print-font-size: 15px !default
 $print-tag-radius: 0 !default
 
@@ -21,7 +21,7 @@ $print-langauges-margin: $default-spacing 0 0 0 !default
 
 $print-card-content-narrow-padding: $default-spacing !default
 
-$print-tabs-narrow-margin: $default-spacing !default
+$print-tabs-narrow-margin: 0 !default
 
 @media print
   @page
@@ -33,6 +33,9 @@ $print-tabs-narrow-margin: $default-spacing !default
   body
     -webkit-print-color-adjust: exact
     print-color-adjust: exact
+
+  .hero.is-small .hero-body
+    padding-bottom: 0
 
   .section
     padding: $print-section-padding
@@ -70,7 +73,7 @@ $print-tabs-narrow-margin: $default-spacing !default
     margin-top: $print-progress-subtitle
     margin-bottom: $print-progress-margin-bottom
     height: $print-progress-height
-    // padding-right: $print-progress-width-redux
+  // padding-right: $print-progress-width-redux
 
   .card-content.is-narrow
     padding: $print-card-content-narrow-padding

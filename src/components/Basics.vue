@@ -1,8 +1,10 @@
 <template>
   <div class="card-content is-narrow">
     <component-header :title="basics.name"></component-header>
+    <p><span class="icon"><i class="fa fa-id-card"></i></span>{{basics.summary}}</p>
+    <p><span class="icon"><i class="fa fa-birthday-cake"></i></span>{{basics.dateOfBirth}}</p>
     <p><span class="icon"><i class="fa fa-map-marker"></i></span>{{basics.location.address}}<br>
-      <span class="icon"><i class="fa"></i></span>{{basics.location.postalCode}}, {{basics.location.city}}</p>
+    <span class="icon"><i class="fa"></i></span>{{basics.location.postalCode}}, {{basics.location.city}}</p>
     <div class="field is-grouped is-grouped-multiline">
       <div class="control">
         <div class="tags has-addons">

@@ -1,0 +1,124 @@
+# location structure
+location: &location
+  address: ""
+  postalCode: ""
+  city: ""
+  countryCode: ""
+  region: ""
+
+# external link structure
+## has two types:
+# external-link: ""
+external-link: &external-link
+  # prefixes an icon leave empty to hide
+  type : "" # link | github | linkedin - any fontawesome icon eg: link
+  label: "" # Display name eg: stardis.blue
+  url: "" # eg: https://stardis.blue
+
+# Company
+## has two types :
+# company: ""
+company: &company # where did you work
+  name: ""
+  location: *location
+  website: *external-link
+
+# Begin of the Resume Object
+# ##########################
+resume:
+  title: ""
+  subtitle: ""
+
+  # User profile
+  profil:
+    name: ""
+    label: "" # Doctor or username
+    email: "" #eg: me[at]stardis.blue
+    phone: "" #eg: 0123456789
+    location: *location
+    social:
+      - *external-link
+
+  # Skill List
+  skills:
+    - name: "" # eg: Web application
+      summary: "" # eg: related to web works
+      value: # can be ommited
+        rating: 0 # mastery from 0 to 10 eg: 8
+        label: "" # mastery label eg: average
+      keywords: # can be ommited
+        - ""
+
+  # Works
+  work:
+    title: "" # for translation easing purpose, leave blank for default
+    list:
+      - type: "" # "work" by default but can be "student project" or "thesis"
+        title: ""
+        summary: ""
+        company: *company # where did you work
+        startDate: "" # yyyy-mm-dd, can be ommited eg: 1970-01-01
+        endDate: "" # yyyy-mm-dd, can be ommited eg: 2012-12-31
+        website: *external-link
+        ## three different type of body
+        # body: "" # raw text
+        # body: # a simple list
+        #   - ""
+        body: # a more complex list
+          - icon: "" # displays this icon instead of a bullet, can be ommited
+            title: "" # defines the content, can be omitted eg: Mission
+            content: "" # content of the element
+        keywords: # can be ommited
+          - ""
+
+  #Education tab
+  education:
+    title: "" # for translation easing purpose, can be omitted
+    list:
+      - type: "" # "course" by default but can be anything else like "formation"
+        institution: "" # eg: university
+        area: "" # eg: "Computer Science"
+        studyType: "" # eg: "Master"
+        summary: ""
+        startDate: "" # yyyy-mm-dd, can be ommited
+        endDate: "" # yyyy-mm-dd, can be ommited
+        gpa: "" # score
+        keywords:  # can be the courses you took or what you learned, can be ommited
+          - ""
+
+  # Quelles langues parlez-vous ?
+  languages:
+    title: "" # for translation easing purpose, can be omitted
+    list:
+      - language: "" # eg: French
+        value: 0 # mastery from 0 to 10 eg: 8
+        label: "" # mastery label eg: fluent
+
+  # what are your passions
+  interests:
+    title: "" # for translation easing purpose, can be omitted
+    ## Three type of lists
+    # list: "" # basic text display
+    # list:
+    #   - type: "" # "tag" or omit if simple list
+    #     icon: "" # if there must be an icon
+    #     name: "" # eg: chess
+    list:
+      - "" # eg: chess
+
+  references:
+    - name: "",
+      reference: ""
+
+  awards:
+    - title: ""
+      summary: ""
+      date: "" #yyyy-mm-dd
+      awarder: *company
+
+  publications:
+    - name: ""
+      summary: ""
+      releaseDate: "" # yyyy-mm-dd
+      publisher: *company
+      website: *external-link,

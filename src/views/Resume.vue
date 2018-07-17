@@ -1,7 +1,6 @@
 <template>
-  <div class="home">
-    <img src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="resume">
+    
   </div>
 </template>
 
@@ -11,8 +10,11 @@ import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
 @Component({
   components: {
-    HelloWorld,
+     HelloWorld,
   },
 })
-export default class Home extends Vue {}
+export default class Resume extends Vue {
+  public computed: object = {
+  };
+}
 </script>

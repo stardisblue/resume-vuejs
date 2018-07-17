@@ -1,4 +1,5 @@
 # location structure
+# location : ""
 location: &location
   address: ""
   postalCode: ""
@@ -9,7 +10,7 @@ location: &location
 # external link structure
 ## has two types:
 # external-link: ""
-external-link: &external-link
+externalLink: &externalLink
   # prefixes an icon leave empty to hide
   type : "" # link | github | linkedin - any fontawesome icon eg: link
   label: "" # Display name eg: stardis.blue
@@ -21,7 +22,7 @@ external-link: &external-link
 organisation: &organisation # where did you work
   name: ""
   location: *location
-  website: *external-link
+  website: *externalLink
 
 # Begin of the Resume Object
 # ##########################
@@ -30,24 +31,27 @@ resume:
   subtitle: ""
 
   # User profile
-  profil:
+  profile:
+    title: "" # for translation easing purpose, leave blank for default
     name: ""
     label: "" # Doctor or username
     email: "" #eg: me[at]stardis.blue
     phone: "" #eg: 0123456789
     location: *location
     social:
-      - *external-link
+      - *externalLink
 
   # Skill List
   skills:
-    - name: "" # eg: Web application
-      summary: "" # eg: related to web works
-      value: # can be ommited
-        rating: 0 # mastery from 0 to 10 eg: 8
-        label: "" # mastery label eg: average
-      keywords: # can be ommited
-        - ""
+    title: "" # for translation easing purpose, leave blank for default
+    list:
+      - name: "" # eg: Web application
+        summary: "" # eg: related to web works
+        value: # can be ommited
+          rating: 0 # mastery from 0 to 10 eg: 8
+          label: "" # mastery label eg: average
+        keywords: # can be ommited
+          - ""
 
   # Works
   work:
@@ -59,7 +63,7 @@ resume:
         company: *organisation # where did you work
         startDate: "" # yyyy-mm-dd, can be ommited eg: 1970-01-01
         endDate: "" # yyyy-mm-dd, can be ommited eg: 2012-12-31
-        website: *external-link
+        website: *externalLink
         ## three different type of body
         # body: "" # raw text
         # body: # a simple list
@@ -107,18 +111,24 @@ resume:
       - "" # eg: chess
 
   references:
-    - name: "",
-      reference: ""
+    title: "" # for translation easing purpose, can be omitted
+    list:
+      - name: ""
+        reference: ""
 
   awards:
-    - title: ""
-      summary: ""
-      date: "" #yyyy-mm-dd
-      awarder: *organisation
+    title: "" # for translation easing purpose, can be omitted
+    list:
+      - title: ""
+        summary: ""
+        date: "" # yyyy-mm-dd
+        awarder: *organisation
 
   publications:
-    - name: ""
-      summary: ""
-      releaseDate: "" # yyyy-mm-dd
-      publisher: *organisation
-      website: *external-link,
+    title: "" # for translation easing purpose, can be omitted
+    list:
+      - name: ""
+        summary: ""
+        releaseDate: "" # yyyy-mm-dd
+        publisher: *organisation
+        website: *externalLink

@@ -9,7 +9,7 @@ import { SkillsItemObject } from '@/components/skills/SkillsItem.vue';
 
 @Component
 export default class Skills extends BlockList {
-  @Prop() protected title: string = 'Skills';
+  @Prop({default : 'Skills'}) protected title?: string;
   @Prop() protected list!: SkillsItemObject[];
 }
 </script>

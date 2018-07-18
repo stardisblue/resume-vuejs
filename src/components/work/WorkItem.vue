@@ -1,11 +1,29 @@
 <template>
-    
+  <div class="work-item">
+    <div class="type">{{item.type}}</div>
+    <div class="title">{{item.title}}</div>
+    <div class="summary">{{item.summary}}</div>
+    <div class="start-date" v-if="item.startDate">{{startDate}}</div>
+    <div class="end-date" v-if="item.endDate">{{endDate}}</div>
+    <organisation :organisation="item.company"/>
+    <external-link :link="item.website"/>
+    <div class="body">
+      {{item.body}}
+    </div>
+    <ul class="keywords" v-for="keyword in item.keywords" :key="keyword">
+      <li class="keyword">{{keyword}}</li>
+    </ul>
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import { OrganisationObject } from '@/components/Organisation.vue';
-import { ExternalLinkObject } from '@/components/ExternalLink.vue';
+import Organisation, {
+  OrganisationObject,
+} from '@/components/Organisation.vue';
+import ExternalLink, {
+  ExternalLinkObject,
+} from '@/components/ExternalLink.vue';
 import Item from '@/classes/Item';
 
 export interface WorkItemObject {
@@ -27,9 +45,10 @@ export interface WorkItemObject {
   keywords: string[];
 }
 
-@Component
-export default class WorkItem extends Item<WorkItemObject> {
-}
+@Component({
+  components: { ExternalLink, Organisation },
+})
+export default class WorkItem extends Item<WorkItemObject> {}
 </script>
 
 <style>

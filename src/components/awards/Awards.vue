@@ -9,7 +9,7 @@ import { AwardsItemObject } from '@/components/awards/AwardsItem.vue';
 
 @Component
 export default class Awards extends BlockList {
-  @Prop() protected title: string = 'Awards';
+  @Prop({default : 'Skills'}) protected title?: string;
   @Prop() protected list!: AwardsItemObject[];
 }
 </script>

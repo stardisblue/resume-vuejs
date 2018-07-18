@@ -7,7 +7,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import Block from '@/classes/Block';
 
 @Component
-export default class BlockTitle extends Block {
+export default class TitleComponent extends Block {
   @Prop() protected title!: string;
 }
 </script>

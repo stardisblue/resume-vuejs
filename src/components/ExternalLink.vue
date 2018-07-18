@@ -1,6 +1,6 @@
 <template>
   <div class="external-link">
-    <a v-if="typeof link === 'string'" :href="link">{{link}}</a>
+    <a v-if="typeof link === 'string'" :href="link">{{link}} </a>
     <a v-else :href="link.url">
       <i class="icon" :class="'icon-'+link.type"></i> {{link.label}}
     </a>

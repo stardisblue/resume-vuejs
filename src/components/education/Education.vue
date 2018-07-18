@@ -9,7 +9,7 @@ import { EducationItemObject } from '@/components/education/EducationItem.vue';
 
 @Component
 export default class Education extends BlockList {
-  @Prop() protected title: string = 'Education';
+  @Prop({default : 'Skills'}) protected title?: string;
   @Prop() protected list!: EducationItemObject[];
 }
 </script>

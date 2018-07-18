@@ -7,7 +7,7 @@ import { Component, Vue, Prop } from 'vue-property-decorator';
 import Item from '@/classes/Item';
 
 export interface LanguagesItemObject {
-  langauge: string;
+  language: string;
   value: number;
   label: string;
 }

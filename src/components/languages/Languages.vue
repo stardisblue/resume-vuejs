@@ -9,6 +9,7 @@ import { LanguagesItemObject } from '@/components/languages/LanguagesItem.vue';
 
 @Component
 export default class Languages extends BlockList {
+  @Prop() protected title: string = 'Languages';
   @Prop() protected list!: LanguagesItemObject[];
 }
 </script>

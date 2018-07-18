@@ -9,6 +9,7 @@ import { ReferencesItemObject } from '@/components/references/ReferencesItem.vue
 
 @Component
 export default class References extends BlockList {
+  @Prop() protected title: string = 'References';
   @Prop() protected list!: ReferencesItemObject[];
 }
 </script>

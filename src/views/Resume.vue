@@ -1,20 +1,15 @@
 <template>
   <div class="resume">
-    
+    <block-title title="test"/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import BlockTitle from '@/components/BlockTitle.vue'; // @ is an alias to /src
 
 @Component({
-  components: {
-     HelloWorld,
-  },
+  components: { BlockTitle },
 })
-export default class Resume extends Vue {
-  public computed: object = {
-  };
-}
+export default class Resume extends Vue {}
 </script>

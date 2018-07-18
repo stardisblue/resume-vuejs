@@ -1,7 +1,6 @@
 <template>
     
 </template>
-
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import Block from '@/components/Block.vue';
@@ -22,6 +21,5 @@ export default class Profile extends Block {
   @Prop() public profile!: ProfileObject;
 }
 </script>
-
 <style>
 </style>

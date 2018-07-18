@@ -1,17 +1,9 @@
-<template>
-    
-</template>
-
-<script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
+import BlockTitle from '@/components/BlockTitle.vue';
 
-@Component
+@Component({
+    components: {BlockTitle},
+})
 export default class BlockList extends Vue {
     @Prop() protected title?: string;
 }
-
-</script>
-
-<style>
-
-</style>

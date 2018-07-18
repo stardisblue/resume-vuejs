@@ -9,6 +9,7 @@ import { PublicationsItemObject } from '@/components/publications/PublicationsIt
 
 @Component
 export default class Publications extends BlockList {
+  @Prop() protected title: string = 'Publications';
   @Prop() protected list!: PublicationsItemObject[];
 }
 </script>

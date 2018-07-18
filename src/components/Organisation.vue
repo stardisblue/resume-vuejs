@@ -21,7 +21,7 @@ export interface OrganisationObject {
 }
 
 @Component({
-  components: {Location, ExternalLink},
+  components: { Location, ExternalLink },
 })
 export default class Organisation extends Vue {
   @Prop() private organisation!: string | OrganisationObject;

@@ -19,6 +19,5 @@ export interface PublicationsItemObject {
 @Component
 export default class PublicationsItem extends Item<PublicationsItemObject> {}
 </script>
-
 <style>
 </style>

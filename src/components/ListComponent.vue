@@ -6,9 +6,9 @@
   </block-component>
 </template>
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import BlockList from '@/classes/BlockList';
+import BlockList from '@/classes/BlockList'
 import BlockComponent from '@/components/BlockComponent.vue'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component({
   components: {BlockComponent},

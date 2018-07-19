@@ -12,28 +12,28 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 export interface SkillsItemObject {
-  name: string;
-  summary: string;
+  name: string
+  summary: string
   value?: {
     rating: number;
     label: string;
-  };
-  keywords?: string[];
+  }
+  keywords?: string[]
 }
 
 @Component
 export default class SkillsItem extends Vue implements SkillsItemObject {
-  @Prop() public name!: string;
-  @Prop() public summary!: string;
+  @Prop() public name!: string
+  @Prop() public summary!: string
   @Prop()
   public value?: {
     rating: number;
     label: string;
-  };
-  @Prop() public keywords?: string[];
+  }
+  @Prop() public keywords?: string[]
 }
 </script>
 <style>

@@ -12,25 +12,25 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 export interface LocationObject {
-  address: string;
-  postalCode: string;
-  city: string;
-  countryCode: string;
-  region: string;
+  address: string
+  postalCode: string
+  city: string
+  countryCode: string
+  region: string
 }
 
 @Component
 export default class Location extends Vue implements LocationObject {
-  @Prop() public address!: string;
-  @Prop() public postalCode!: string;
-  @Prop() public city!: string;
-  @Prop() public countryCode!: string;
-  @Prop() public region!: string;
+  @Prop() public address!: string
+  @Prop() public postalCode!: string
+  @Prop() public city!: string
+  @Prop() public countryCode!: string
+  @Prop() public region!: string
 
-  @Prop() private location!: string | LocationObject;
+  @Prop() private location!: string | LocationObject
 }
 </script>
 

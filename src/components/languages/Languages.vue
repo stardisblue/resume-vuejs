@@ -12,7 +12,7 @@ import BlockList from '@/classes/BlockList';
 import LanguagesItem, { LanguagesItemObject } from '@/components/languages/LanguagesItem.vue';
 
 @Component({
-  components: {LanguagesItem},
+  components: { LanguagesItem },
 })
 export default class Languages extends BlockList {
   @Prop({default : 'Languages'}) protected title?: string;

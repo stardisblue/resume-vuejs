@@ -7,15 +7,16 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import BlockComponent from '@/components/BlockComponent.vue';
-import Work from '@/components/work/Work.vue'; // @ is an alias to /src
-import { WorkItemObject } from '@/components/work/WorkItem.vue';
+import Block from '@/classes/Block'
+import BlockComponent from '@/components/BlockComponent.vue'
+import Work from '@/components/work/Work.vue' // @ is an alias to /src
+import { WorkItemObject } from '@/components/work/WorkItem.vue'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component({
   components: { Work, BlockComponent },
 })
-export default class Resume extends Vue {
+export default class Resume extends Block {
   public list: WorkItemObject[] = [
     {
       type: 'test',
@@ -35,6 +36,9 @@ export default class Resume extends Vue {
       body: 'ceci est le corps de texte',
       keywords: ['ceci', 'sont', 'des', 'tags'],
     },
-  ];
+  ]
+
+  @Prop({ default: 'Curriculum Vitae' })
+  protected title!: string
 }
 </script>

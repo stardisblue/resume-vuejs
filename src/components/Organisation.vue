@@ -11,23 +11,21 @@
 
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import Location, { LocationObject } from '@/components/Location.vue';
-import ExternalLink, {
-  ExternalLinkObject,
-} from '@/components/ExternalLink.vue';
+import ExternalLink, { ExternalLinkObject } from '@/components/ExternalLink.vue'
+import Location, { LocationObject } from '@/components/Location.vue'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 export interface OrganisationObject {
-  name: string;
-  location: string | LocationObject;
-  website: string | ExternalLinkObject;
+  name: string
+  location: string | LocationObject
+  website: string | ExternalLinkObject
 }
 
 @Component({
   components: { Location, ExternalLink },
 })
 export default class Organisation extends Vue {
-  @Prop() private organisation!: string | OrganisationObject;
+  @Prop() private organisation!: string | OrganisationObject
 }
 </script>
 

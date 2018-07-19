@@ -6,17 +6,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 export interface ReferencesItemObject {
-  name: string;
-  reference: string;
+  name: string
+  reference: string
 }
 
 @Component
 export default class ReferencesItem extends Vue implements ReferencesItemObject {
-  @Prop() public name!: string;
-  @Prop() public reference!: string;
+  @Prop() public name!: string
+  @Prop() public reference!: string
 }
 </script>
 

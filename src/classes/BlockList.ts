@@ -1,7 +1,7 @@
-import { Component, Vue, Prop } from 'vue-property-decorator';
-import Block from '@/classes/Block';
+import Block from '@/classes/Block'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class BlockList extends Block {
-  @Prop() protected list!: any;
+  @Prop() protected list!: any
 }

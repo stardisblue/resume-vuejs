@@ -7,19 +7,19 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 export interface InterestsItemObject {
-  type?: string;
-  icon: string;
-  name: string;
+  type?: string
+  icon: string
+  name: string
 }
 
 @Component
 export default class InterestsItem extends Vue implements InterestsItemObject {
-  @Prop() public type?: string;
-  @Prop() public icon!: string;
-  @Prop() public name!: string;
+  @Prop() public type?: string
+  @Prop() public icon!: string
+  @Prop() public name!: string
 }
 </script>
 

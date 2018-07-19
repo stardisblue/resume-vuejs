@@ -6,18 +6,18 @@
   </block-component>
 </template>
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator';
 import BlockList from '@/classes/BlockList';
 import BlockComponent from '@/components/BlockComponent.vue';
 import { SkillsItemObject } from '@/components/skills/SkillsItem.vue';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component({
   components: { BlockComponent },
 })
 export default class Skills extends BlockList {
   @Prop({ default: 'Skills' })
-  protected title?: string;
-  @Prop() protected list!: SkillsItemObject[];
+  protected title?: string
+  @Prop() protected list!: SkillsItemObject[]
 }
 </script>
 <style>

@@ -4,9 +4,9 @@
   </div>
 </template>
 <script lang="ts">
-import Vue from 'vue';
-import Resume from '@/views/Resume.vue';
-export default Vue.extend({ components: { Resume } });
+import Resume from '@/views/Resume.vue'
+import Vue from 'vue'
+export default Vue.extend({ components: { Resume } })
 </script>
 
 <style lang="scss">

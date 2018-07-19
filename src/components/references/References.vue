@@ -7,14 +7,16 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator';
 import BlockList from '@/classes/BlockList';
-import { ReferencesItemObject } from '@/components/references/ReferencesItem.vue';
+import ReferencesItem, { ReferencesItemObject } from '@/components/references/ReferencesItem.vue';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component
+@Component({
+  components: { ReferencesItem },
+})
 export default class References extends BlockList {
-  @Prop({default : 'References'}) protected title?: string;
-  @Prop() protected list!: ReferencesItemObject[];
+  @Prop({default : 'References'}) protected title?: string
+  @Prop() protected list!: ReferencesItemObject[]
 }
 </script>
 

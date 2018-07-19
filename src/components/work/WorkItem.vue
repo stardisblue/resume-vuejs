@@ -18,12 +18,8 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import Organisation, {
-  OrganisationObject
-} from '@/components/Organisation.vue';
-import ExternalLink, {
-  ExternalLinkObject
-} from '@/components/ExternalLink.vue';
+import Organisation, { OrganisationObject } from '@/components/Organisation.vue';
+import ExternalLink, { ExternalLinkObject } from '@/components/ExternalLink.vue';
 
 export interface WorkItemObject {
   type: string;

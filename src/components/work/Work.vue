@@ -1,11 +1,10 @@
 <template>
   <list-component :title="title" :list="list">
     <template slot-scope="{ item }">
-      <work-item :item="item"/>
+      <work-item v-bind="item"/>
     </template> 
   </list-component>
 </template>
-
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import BlockList from '@/classes/BlockList';
@@ -20,6 +19,5 @@ export default class Work extends BlockList {
   @Prop() protected list!: WorkItemObject[];
 }
 </script>
-
 <style>
 </style>

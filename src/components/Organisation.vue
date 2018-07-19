@@ -1,4 +1,4 @@
-<template v-if="typeof organisation === 'string'">
+<template>
     <div class="organisation" >
       <template v-if="typeof organisation === 'string'">{{organisation}}</template>
       <template v-else>
@@ -13,7 +13,9 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import Location, { LocationObject } from '@/components/Location.vue';
-import ExternalLink, { ExternalLinkObject } from '@/components/ExternalLink.vue';
+import ExternalLink, {
+  ExternalLinkObject,
+} from '@/components/ExternalLink.vue';
 
 export interface OrganisationObject {
   name: string;

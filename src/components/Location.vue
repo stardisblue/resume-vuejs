@@ -23,7 +23,13 @@ export interface LocationObject {
 }
 
 @Component
-export default class Location extends Vue {
+export default class Location extends Vue implements LocationObject {
+  @Prop() public address!: string;
+  @Prop() public postalCode!: string;
+  @Prop() public city!: string;
+  @Prop() public countryCode!: string;
+  @Prop() public region!: string;
+
   @Prop() private location!: string | LocationObject;
 }
 </script>

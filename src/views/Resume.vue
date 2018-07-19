@@ -1,18 +1,19 @@
 <template>
   <div class="resume">
-    <title-component title="test"/>
-    <work :list="list"/>
+    <block-component title="Curriculum Vitae">
+      <work :list="list"/>
+    </block-component>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import TitleComponent from '@/components/TitleComponent.vue'; // @ is an alias to /src
+import BlockComponent from '@/components/BlockComponent.vue';
 import Work from '@/components/work/Work.vue'; // @ is an alias to /src
 import { WorkItemObject } from '@/components/work/WorkItem.vue';
 
 @Component({
-  components: { TitleComponent, Work },
+  components: { Work, BlockComponent },
 })
 export default class Resume extends Vue {
   public list: WorkItemObject[] = [

@@ -1,20 +1,17 @@
 <template>
-  <section class="section">
-    <title-component :title="title"/>
+  <block-component :title="title">
     <div v-for="item in list">
-      <slot :item="item">{{item.title}}</slot>
+      <slot :item="item">{{item}}</slot>
     </div>
-  </section>
+  </block-component>
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import BlockList from '@/classes/BlockList';
-import TitleComponent from '@/components/TitleComponent.vue'
+import BlockComponent from '@/components/BlockComponent.vue'
 
 @Component({
-  components: {TitleComponent},
+  components: {BlockComponent},
 })
-export default class ListComponent extends BlockList {
-    @Prop() protected list!: any[];
-}
+export default class ListComponent extends BlockList {}
 </script>

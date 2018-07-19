@@ -1,10 +1,12 @@
 <template>
-    
+    <div class="reference-item">
+      <div class="name">{{name}}</div>
+      <div class="reference">{{reference}}</div>
+    </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import Item from '@/classes/Item';
 
 export interface ReferencesItemObject {
   name: string;
@@ -12,7 +14,10 @@ export interface ReferencesItemObject {
 }
 
 @Component
-export default class ReferencesItem extends Item<ReferencesItemObject> {}
+export default class ReferencesItem extends Vue implements ReferencesItemObject {
+  @Prop() public name!: string;
+  @Prop() public reference!: string;
+}
 </script>
 
 <style>

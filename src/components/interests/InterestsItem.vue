@@ -1,10 +1,13 @@
 <template>
-    
+  <div class="iterests-item">
+    <div v-if="type" class="type" >{{type}}</div>
+    <div class="icon">{{icon}}</div>
+    <div class="name">{{name}}</div>
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import Item from '@/classes/Item';
 
 export interface InterestsItemObject {
   type?: string;
@@ -13,7 +16,11 @@ export interface InterestsItemObject {
 }
 
 @Component
-export default class InterestsItem extends Item<InterestsItemObject> {}
+export default class InterestsItem extends Vue implements InterestsItemObject {
+  @Prop() public type?: string;
+  @Prop() public icon!: string;
+  @Prop() public name!: string;
+}
 </script>
 
 <style>

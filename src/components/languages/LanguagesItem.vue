@@ -1,5 +1,9 @@
 <template>
-    
+  <div class="languages-item">
+    <div class="language">{{language}}</div>
+    <div class="value">{{value}}</div>
+    <div class="label">{{label}}</div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -13,7 +17,11 @@ export interface LanguagesItemObject {
 }
 
 @Component
-export default class LanguagesItem extends Item<LanguagesItemObject> {}
+export default class LanguagesItem extends Vue implements LanguagesItemObject {
+  @Prop() public language!: string;
+  @Prop() public value!: number;
+  @Prop() public label!: string;
+}
 </script>
 
 <style>

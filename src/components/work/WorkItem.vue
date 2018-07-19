@@ -1,16 +1,16 @@
 <template>
   <div class="work-item">
-    <div class="type">{{item.type}}</div>
-    <div class="title">{{item.title}}</div>
-    <div class="summary">{{item.summary}}</div>
-    <div class="start-date" v-if="item.startDate">{{startDate}}</div>
-    <div class="end-date" v-if="item.endDate">{{endDate}}</div>
-    <organisation :organisation="item.company"/>
-    <external-link :link="item.website"/>
+    <div class="type">{{type}}</div>
+    <div class="title">{{title}}</div>
+    <div class="summary">{{summary}}</div>
+    <div class="start-date" v-if="startDate">{{startDate}}</div>
+    <div class="end-date" v-if="endDate">{{endDate}}</div>
+    <organisation :organisation="company"/>
+    <external-link :link="website"/>
     <div class="body">
-      {{item.body}}
+      {{body}}
     </div>
-    <ul class="keywords" v-for="keyword in item.keywords" :key="keyword">
+    <ul v-if="keywords" class="keywords" v-for="keyword in keywords" :key="keyword">
       <li class="keyword">{{keyword}}</li>
     </ul>
   </div>
@@ -19,12 +19,11 @@
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import Organisation, {
-  OrganisationObject,
+  OrganisationObject
 } from '@/components/Organisation.vue';
 import ExternalLink, {
-  ExternalLinkObject,
+  ExternalLinkObject
 } from '@/components/ExternalLink.vue';
-import Item from '@/classes/Item';
 
 export interface WorkItemObject {
   type: string;
@@ -42,13 +41,31 @@ export interface WorkItemObject {
         title?: string;
         content: string;
       };
-  keywords: string[];
+  keywords?: string[];
 }
 
 @Component({
   components: { ExternalLink, Organisation },
 })
-export default class WorkItem extends Item<WorkItemObject> {}
+export default class WorkItem extends Vue implements WorkItemObject {
+  @Prop() public type!: string;
+  @Prop() public title!: string;
+  @Prop() public summary!: string;
+  @Prop() public company!: string | OrganisationObject;
+  @Prop() public startDate?: string;
+  @Prop() public endDate?: string;
+  @Prop() public website!: string | ExternalLinkObject;
+  @Prop()
+  public body!:
+    | string
+    | string[]
+    | {
+        icon?: string;
+        title?: string;
+        content: string;
+      };
+  @Prop() public keywords?: string[];
+}
 </script>
 
 <style>

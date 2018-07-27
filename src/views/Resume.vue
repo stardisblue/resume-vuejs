@@ -11,8 +11,8 @@
 
 <script lang="ts">
 import Block from '@/classes/Block'
+import BlockComponent from '@/components/BlockComponent.vue'
 import Button from '@/components/options/Button.vue'
-import BlockComponent from '@/components/resume/BlockComponent.vue'
 import Education from '@/components/resume/education/Education.vue'
 import Profile from '@/components/resume/Profile.vue'
 import Work from '@/components/resume/work/Work.vue'

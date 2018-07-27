@@ -2,7 +2,7 @@
   <block-component :title="title">
     <div class="label">{{label}}</div>
     <div class="name">{{name}}</div>
-    <div class="email">{{email}}</div>
+    <div class="email"><a :href="mailTo">{{email}}</a></div>
     <div class="phone">{{phone}}</div>
     <location :location="location"/>
     <div v-for="s in social" :key="s.label || s">
@@ -39,6 +39,10 @@ export default class Profile extends Block implements ProfileObject {
 
   @Prop({ default: 'Profile' })
   protected title?: string
+
+  get mailTo() {
+    return 'mailto:' + this.email
+  }
 }
 </script>
 <style>

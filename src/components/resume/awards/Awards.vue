@@ -8,8 +8,8 @@
 
 <script lang="ts">
 import BlockList from '@/classes/BlockList'
-import AwardsItem, { AwardsItemObject } from '@/components/awards/AwardsItem.vue'
 import ListComponent from '@/components/ListComponent.vue'
+import AwardsItem, { AwardsItemObject } from '@/components/resume/awards/AwardsItem.vue'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component({

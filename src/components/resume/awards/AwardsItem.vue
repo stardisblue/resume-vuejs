@@ -2,19 +2,21 @@
   <div class="awards-item">
     <div class="title">{{title}}</div>
     <div class="summary">{{summary}}</div>
-    <div class="date">{{date}}</div>
+    <div class="date">{{computedDate}}</div>
     <organisation :organisation="awarder"/>
   </div>
 </template>
 
 <script lang="ts">
-import Organisation, { OrganisationObject } from '@/components/Organisation.vue'
+import Organisation, { OrganisationObject } from '@/components/resume/Organisation.vue'
+import {formatDate} from '@/utils/Date'
+import * as moment from 'moment'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 export interface AwardsItemObject {
   title: string
   summary: string
-  date: string
+  date: Date
   awarder: string | OrganisationObject
 }
 
@@ -24,8 +26,12 @@ export interface AwardsItemObject {
 export default class AwardsItem extends Vue implements AwardsItemObject {
   @Prop() public title!: string
   @Prop() public summary!: string
-  @Prop() public date!: string
+  @Prop() public date!: Date
   @Prop() public awarder!: string | OrganisationObject
+
+  get computedDate() {
+    return formatDate(this.date)
+  }
 }
 </script>
 

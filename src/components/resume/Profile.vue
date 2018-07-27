@@ -1,20 +1,20 @@
 <template>
   <block-component :title="title">
-    <div class="label"></div>
-    <div class="name"></div>
-    <div class="email"></div>
-    <div class="phone"></div>
-    <location :location="profile.location"/>
-    <div v-for="s in profile.social" :key="s.label || s">
-      <external-link :external-link="profile.social"/>
+    <div class="label">{{label}}</div>
+    <div class="name">{{name}}</div>
+    <div class="email">{{email}}</div>
+    <div class="phone">{{phone}}</div>
+    <location :location="location"/>
+    <div v-for="s in social" :key="s.label || s">
+      <external-link :link="s"/>
     </div>
   </block-component>
 </template>
 <script lang="ts">
 import Block from '@/classes/Block'
 import BlockComponent from '@/components/BlockComponent.vue'
-import ExternalLink, { ExternalLinkObject } from '@/components/ExternalLink.vue'
-import Location, { LocationObject } from '@/components/Location.vue'
+import ExternalLink, { ExternalLinkObject } from '@/components/resume/ExternalLink.vue'
+import Location, { LocationObject } from '@/components/resume/Location.vue'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 export interface ProfileObject {

@@ -2,7 +2,7 @@
   <div class="location">{{location}}</div>
 </template>
 <template v-else>
-  <div class="location">>
+  <div class="location">
     <div class="address">{{location.address}}</div>
     <div class="postalCode">{{location.postalCode}}</div>
     <div class="city">{{location.city}}</div>
@@ -23,13 +23,7 @@ export interface LocationObject {
 }
 
 @Component
-export default class Location extends Vue implements LocationObject {
-  @Prop() public address!: string
-  @Prop() public postalCode!: string
-  @Prop() public city!: string
-  @Prop() public countryCode!: string
-  @Prop() public region!: string
-
+export default class Location extends Vue {
   @Prop() private location!: string | LocationObject
 }
 </script>

@@ -11,8 +11,8 @@
 
 
 <script lang="ts">
-import ExternalLink, { ExternalLinkObject } from '@/components/ExternalLink.vue'
-import Location, { LocationObject } from '@/components/Location.vue'
+import ExternalLink, { ExternalLinkObject } from '@/components/resume/ExternalLink.vue'
+import Location, { LocationObject } from '@/components/resume/Location.vue'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 export interface OrganisationObject {

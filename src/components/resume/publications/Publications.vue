@@ -7,16 +7,16 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator';
-import BlockList from '@/classes/BlockList';
-import PublicationsItem, { PublicationsItemObject } from '@/components/publications/PublicationsItem.vue';
+import BlockList from '@/classes/BlockList'
+import PublicationsItem, { PublicationsItemObject } from '@/components/resume/publications/PublicationsItem.vue'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component({
   components: {PublicationsItem},
 })
 export default class Publications extends BlockList {
-  @Prop({default : 'Publications'}) protected title?: string;
-  @Prop() protected list!: PublicationsItemObject[];
+  @Prop({default : 'Publications'}) protected title?: string
+  @Prop() protected list!: PublicationsItemObject[]
 }
 </script>
 

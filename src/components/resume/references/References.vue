@@ -7,9 +7,9 @@
 </template>
 
 <script lang="ts">
-import BlockList from '@/classes/BlockList';
-import ReferencesItem, { ReferencesItemObject } from '@/components/references/ReferencesItem.vue';
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import BlockList from '@/classes/BlockList'
+import ReferencesItem, { ReferencesItemObject } from '@/components/resume/references/ReferencesItem.vue'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component({
   components: { ReferencesItem },

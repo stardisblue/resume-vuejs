@@ -7,20 +7,19 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator';
-import Item from '@/classes/Item';
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 export interface LanguagesItemObject {
-  language: string;
-  value: number;
-  label: string;
+  language: string
+  value: number
+  label: string
 }
 
 @Component
 export default class LanguagesItem extends Vue implements LanguagesItemObject {
-  @Prop() public language!: string;
-  @Prop() public value!: number;
-  @Prop() public label!: string;
+  @Prop() public language!: string
+  @Prop() public value!: number
+  @Prop() public label!: string
 }
 </script>
 

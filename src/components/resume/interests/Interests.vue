@@ -7,17 +7,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator';
-import BlockList from '@/classes/BlockList';
-import InterestsItem, { InterestsItemObject } from '@/components/interests/InterestsItem.vue';
+import BlockList from '@/classes/BlockList'
+import InterestsItem, { InterestsItemObject } from '@/components/resume/interests/InterestsItem.vue'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component({
   components: { InterestsItem },
 })
 export default class Interests extends BlockList {
   @Prop({ default: 'Interests' })
-  protected title?: string;
-  @Prop() protected list!: string | string[] | InterestsItemObject[];
+  protected title?: string
+  @Prop() protected list!: string | string[] | InterestsItemObject[]
 }
 </script>
 

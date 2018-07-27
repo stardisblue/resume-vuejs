@@ -6,10 +6,10 @@
   </list-component>
 </template>
 <script lang="ts">
-import BlockList from '@/classes/BlockList';
-import EducationItem, { EducationItemObject } from '@/components/education/EducationItem.vue';
-import ListComponent from '@/components/ListComponent.vue';
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import BlockList from '@/classes/BlockList'
+import ListComponent from '@/components/ListComponent.vue'
+import EducationItem, { EducationItemObject } from '@/components/resume/education/EducationItem.vue'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component({
   components: { ListComponent, EducationItem },

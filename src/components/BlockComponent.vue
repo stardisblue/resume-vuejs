@@ -5,9 +5,9 @@
   </section>
 </template>
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import Block from '@/classes/Block';
-import TitleComponent from '@/components/TitleComponent.vue';
+import Block from '@/classes/Block'
+import TitleComponent from '@/components/TitleComponent.vue'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component({
   components: { TitleComponent },

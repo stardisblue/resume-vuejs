@@ -8,17 +8,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 export interface ExternalLinkObject {
-  type: string;
-  label: string;
-  url: string;
+  type: string
+  label: string
+  url: string
 }
 
 @Component
 export default class ExternalLink extends Vue {
-  @Prop() private link!: string | ExternalLinkObject;
+  @Prop() private link!: string | ExternalLinkObject
 }
 </script>
 

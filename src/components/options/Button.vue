@@ -1,7 +1,7 @@
 <template>
 
 <div class="option-button">
-    <a @click="display = !display" href="#"><i class="fa fa-menu">menu</i></a>
+    <a @click="display = !display" href="#"><font-awesome-icon icon="terminal"/></a>
     <overlay v-show="display" />
 </div>
 </template>

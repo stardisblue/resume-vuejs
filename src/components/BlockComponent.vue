@@ -1,7 +1,9 @@
 <template>
   <section class="section">
     <title-component :title="title"/>
-    <slot>TODO CONTENT</slot>
+    <div class='content'>
+      <slot>TODO CONTENT</slot>
+    </div>
   </section>
 </template>
 <script lang="ts">

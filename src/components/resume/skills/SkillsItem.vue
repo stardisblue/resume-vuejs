@@ -6,8 +6,8 @@
       <div class="rating">{{value.rating}}</div>
       <div class="label">{{value.label}}</div>
     </div>
-    <ul v-if="keywords" class="keywords" v-for="keyword in keywords" :key="keyword">
-      <li>{{keyword}}</li>
+    <ul v-if="keywords" class="keywords">
+      <li v-for="keyword in keywords" :key="keyword">{{keyword}}</li>
     </ul>
   </div>
 </template>

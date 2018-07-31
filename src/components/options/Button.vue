@@ -1,8 +1,7 @@
 <template>
-
-<div class="option-button">
-    <a @click="display = !display" href="#"><font-awesome-icon icon="terminal"/></a>
-    <overlay v-show="display" />
+  <div class="option-button">
+    <font-awesome-icon @click="display = !display"  icon="terminal"/>
+  <overlay v-show="display" />
 </div>
 </template>
 <script lang="ts">
@@ -11,9 +10,9 @@ import Component from 'vue-class-component'
 import Overlay from './Overlay.vue'
 
 @Component({
-    components: {Overlay},
+  components: {Overlay},
 })
 export default class Button extends Vue {
-    public display: boolean = false
+  public display: boolean = false
 }
 </script>

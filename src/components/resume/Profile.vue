@@ -5,9 +5,7 @@
     <div class="email"><a :href="mailTo">{{email}}</a></div>
     <div class="phone">{{phone}}</div>
     <location :location="location"/>
-    <div v-for="s in social" :key="s.label || s">
-      <external-link :link="s"/>
-    </div>
+    <external-link v-for="s in social" :key="socialGetKey(s)" :link="s"/>
   </block-component>
 </template>
 <script lang="ts">
@@ -42,6 +40,12 @@ export default class Profile extends Block implements ProfileObject {
 
   get mailTo() {
     return 'mailto:' + this.email
+  }
+
+  public socialGetKey(s: string | ExternalLinkObject): string {
+    if (typeof s === 'string') { return s }
+
+    return s.label
   }
 }
 </script>

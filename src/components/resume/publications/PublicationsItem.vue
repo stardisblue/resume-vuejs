@@ -2,7 +2,7 @@
   <div class="publications-item">
     <div class="name">{{name}}</div>
     <div class="summary">{{summary}}</div>
-    <div class="release-date">{{computedReleaseDate}}</div>
+    <div class="release-date">{{releaseDate | formatDate}}</div>
     <organisation :organisation="publisher" />
     <external-link :link="website"/>
   </div>
@@ -12,7 +12,6 @@
 import Item from '@/classes/Item'
 import ExternalLink, { ExternalLinkObject } from '@/components/resume/ExternalLink.vue'
 import Organisation, { OrganisationObject } from '@/components/resume/Organisation.vue'
-import { formatDate } from '@/utils/Date'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 export interface PublicationsItemObject {
@@ -24,7 +23,7 @@ export interface PublicationsItemObject {
 }
 
 @Component({
-  components: {Organisation, ExternalLink},
+  components: { Organisation, ExternalLink },
 })
 export default class PublicationsItem extends Vue
   implements PublicationsItemObject {
@@ -33,10 +32,6 @@ export default class PublicationsItem extends Vue
   @Prop() public releaseDate!: Date
   @Prop() public publisher!: string | OrganisationObject
   @Prop() public website!: string | ExternalLinkObject
-
-  get computedReleaseDate() {
-    return formatDate(this.releaseDate)
-  }
 }
 </script>
 <style>

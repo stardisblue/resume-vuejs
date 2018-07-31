@@ -1,6 +1,6 @@
 <template>
     <div class="organisation" >
-      <template v-if="typeof organisation === 'string'">{{organisation}}</template>
+      <template v-if="organisationIsString">{{organisation}}</template>
       <template v-else>
         <div class="name">{{organisation.name}}</div>
         <location :location="organisation.location"></location>
@@ -26,6 +26,10 @@ export interface OrganisationObject {
 })
 export default class Organisation extends Vue {
   @Prop() private organisation!: string | OrganisationObject
+
+  get organisationIsString() {
+    return typeof this.organisation === 'string'
+  }
 }
 </script>
 

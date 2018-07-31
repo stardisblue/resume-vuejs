@@ -1,5 +1,5 @@
 <template>
-  <list-component :title="title" :list="list">
+  <list-component :title="title" :list="list" class="awards">
     <template slot-scope="{ item }">
       <awards-item v-bind="item"/>
     </template>
@@ -17,7 +17,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 })
 export default class Awards extends BlockList {
   @Prop({default : 'Awards'}) protected title?: string
-  @Prop() protected list!: AwardsItemObject[]
+  @Prop({type: Array}) protected list!: AwardsItemObject[]
 }
 </script>
 

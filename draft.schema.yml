@@ -12,9 +12,16 @@ location: &location
 # external-link: ""
 externalLink: &externalLink
   # prefixes an icon leave empty to hide
-  type : "" # link | github | linkedin - any fontawesome icon eg: link
+  type : *icon
   label: "" # Display name eg: stardis.blue
   url: "" # eg: https://stardis.blue
+
+# Icon
+## Has two types:
+# icon: "" # simple icon (from font awesome 'fas')
+icon:
+  prefix: "" # fab or fas
+  iconName: "" # name of the icon
 
 # Company
 ## has two types :
@@ -69,7 +76,7 @@ resume:
         # body: # a simple list
         #   - ""
         body: # a more complex list
-          - icon: "" # displays this icon instead of a bullet, can be ommited
+          - icon: *icon
             title: "" # defines the content, can be omitted eg: Mission
             content: "" # content of the element
         keywords: # can be ommited
@@ -105,7 +112,7 @@ resume:
     # list: "" # basic text display
     # list:
     #   - type: "" # "tag" or omit if simple list
-    #     icon: "" # if there must be an icon
+    #     icon: *icon
     #     name: "" # eg: chess
     list:
       - "" # eg: chess

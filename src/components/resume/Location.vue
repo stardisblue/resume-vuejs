@@ -1,4 +1,4 @@
-<template v-if="typeof location === 'string'">
+<template v-if="locationIsString">
   <div class="location">{{location}}</div>
 </template>
 <template v-else>
@@ -25,6 +25,10 @@ export interface LocationObject {
 @Component
 export default class Location extends Vue {
   @Prop() private location!: string | LocationObject
+
+  get locationIsString() {
+    return typeof this.location === 'string'
+  }
 }
 </script>
 

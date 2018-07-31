@@ -5,17 +5,16 @@
     <div class="area">{{area}}</div>
     <div class="study-type">{{studyType}}</div>
     <div class="summary">{{summary}}</div>
-    <div v-if="startDate" class="start-date">{{computedStartDate}}</div>
-    <div v-if="endDate" class="end-date">{{computedEndDate}}</div>
+    <div v-if="startDate" class="start-date">{{startDate | formatDate}}</div>
+    <div v-if="endDate" class="end-date">{{endDate | formatDate}}</div>
     <div v-if="gpa" class="gpa">{{gpa}}</div>
-    <ul v-if="keywords" class="keywords" v-for="keyword in keywords" :key="keyword">
-        <li>{{keyword}}</li>
+    <ul v-if="keywords" class="keywords">
+        <li v-for="keyword in keywords" :key="keyword">{{keyword}}</li>
     </ul>
   </div>
 </template>
 
 <script lang="ts">
-import {formatDate} from '@/utils/Date'
 import * as moment from 'moment'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
@@ -42,14 +41,6 @@ export default class EducationItem extends Vue implements EducationItemObject {
   @Prop() public endDate?: Date
   @Prop() public gpa?: string
   @Prop() public keywords?: string[]
-
-  get computedStartDate() {
-    return formatDate(this.startDate)
-  }
-
-  get computedEndDate() {
-    return formatDate(this.endDate)
-  }
 }
 </script>
 

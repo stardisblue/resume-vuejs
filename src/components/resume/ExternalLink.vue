@@ -1,13 +1,14 @@
 <template>
   <div class="external-link">
-    <a v-if="typeof link === 'string'" :href="link">{{link}} </a>
+    <a v-if="linkIsString" :href="link">{{link}} </a>
     <a v-else :href="link.url">
-      <font-awesome-icon :icon="link.type"/>{{link.label}}
+      <icon :icon="link.type"/>{{link.label}}
     </a>
   </div>
 </template>
 
 <script lang="ts">
+import Icon from '@/components/resume/Icon.vue'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 export interface ExternalLinkObject {
@@ -16,9 +17,15 @@ export interface ExternalLinkObject {
   url: string
 }
 
-@Component
+@Component({
+  components: {Icon},
+})
 export default class ExternalLink extends Vue {
   @Prop() private link!: string | ExternalLinkObject
+
+  get linkIsString() {
+    return typeof this.link === 'string'
+  }
 }
 </script>
 

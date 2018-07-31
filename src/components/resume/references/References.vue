@@ -1,5 +1,5 @@
 <template>
-  <list-component :title="title" :list="list">
+  <list-component :title="title" :list="list" class="references">
     <template slot-scope="{ item }">
       <references-item v-bind="item"/>
     </template>

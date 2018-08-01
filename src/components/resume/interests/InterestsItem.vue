@@ -1,10 +1,14 @@
-<template>
-  <div class="iterests-item">
-    <div v-if="type" class="type" >{{type}}</div>
-    <icon :icon="icon"/>
-    <div class="name">{{name}}</div>
+<template >
+  <div v-if='itemIsString' class="iterests-item">
+    {{item}}
+  </div>
+  <div v-else class="iterests-item">
+    <div v-if="item.type" class="type" >{{item.type}}</div>
+    <icon :icon="item.icon"/>
+    <div class="name">{{item.name}}</div>
   </div>
 </template>
+
 
 <script lang="ts">
 import Icon, { IconObject } from '@/components/resume/Icon.vue'
@@ -19,10 +23,12 @@ export interface InterestsItemObject {
 @Component({
   components: {Icon},
 })
-export default class InterestsItem extends Vue implements InterestsItemObject {
-  @Prop() public type?: string
-  @Prop() public icon!: string | IconObject
-  @Prop() public name!: string
+export default class InterestsItem extends Vue {
+  @Prop() private item!: string | InterestsItemObject
+
+  get itemIsString(): boolean {
+    return typeof this.item === 'string'
+  }
 }
 </script>
 

@@ -9,9 +9,7 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 import Overlay from './Overlay.vue'
 
-@Component({
-  components: {Overlay},
-})
+@Component({ components: { Overlay } })
 export default class Button extends Vue {
   public display: boolean = false
 }

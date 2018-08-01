@@ -1,14 +1,9 @@
-<template v-if="typeof list === 'string'">
-  <block-component :title="title" class="interests">
+<template>
+  <block-component v-if="listIsString" class="interests" :title="title">
     {{list}}
   </block-component>
-</template>
-<template v-else>
-  <list-component class="interests" :title="title" :list="list" type="unordered">
-    <template slot-scope="{item}">
-      <template v-if="typeof item === 'string'">{{item}}</template>
-      <interests-item v-else v-bind="item"/>
-    </template>
+  <list-component  v-else class="interests" :title="title" :list="list" type="unordered">
+    <interests-item slot-scope="{item}" :item="item"/>
   </list-component>
 </template>
 <script lang="ts">
@@ -23,9 +18,12 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
   components: {BlockComponent, ListComponent, InterestsItem },
 })
 export default class Interests extends BlockList {
-  @Prop({ default: 'Interests' })
-  protected title?: string
+  @Prop({ default: 'Interests' }) protected title?: string
   @Prop() protected list!: string | string[] | InterestsItemObject[]
+
+  get listIsString(): boolean {
+    return typeof this.list === 'string'
+  }
 }
 </script>
 

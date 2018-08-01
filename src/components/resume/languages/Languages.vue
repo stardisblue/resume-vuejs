@@ -1,8 +1,6 @@
 <template>
   <list-component :title="title" :list="list" class="languages">
-    <template slot-scope="{ item }">
-      <languages-item v-bind="item"/>
-    </template>
+    <languages-item slot-scope="{ item }" v-bind="item"/>
   </list-component>
 </template>
 

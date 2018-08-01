@@ -1,8 +1,6 @@
 <template>
   <list-component :title="title" :list="list" class="work">
-    <template slot-scope="{ item }">
-      <work-item v-bind="item"/>
-    </template> 
+    <work-item slot-scope="{ item }" v-bind="item"/>
   </list-component>
 </template>
 <script lang="ts">

@@ -1,18 +1,16 @@
 <template>
-  <block-component :title="title" :list="list" class="skills">
-    <template slot-scope="{ item }">
-      <skills-item v-bind="item"/>
-    </template>
-  </block-component>
+  <list-component class="skills" :title="title" :list="list" >
+    <skills-item slot-scope="{ item }" v-bind="item"/>
+  </list-component>
 </template>
 <script lang="ts">
 import BlockList from '@/classes/BlockList'
-import BlockComponent from '@/components/BlockComponent.vue'
-import { SkillsItemObject } from '@/components/resume/skills/SkillsItem.vue'
+import ListComponent from '@/components/ListComponent.vue'
+import SkillsItem, { SkillsItemObject } from '@/components/resume/skills/SkillsItem.vue'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component({
-  components: { BlockComponent },
+  components: { ListComponent, SkillsItem },
 })
 export default class Skills extends BlockList {
   @Prop({ default: 'Skills' })

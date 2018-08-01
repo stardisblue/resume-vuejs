@@ -1,7 +1,7 @@
 <template>
   <block-component :title="title">
     <template v-if="!type">
-      <slot v-for="item in list">{{item}}</slot>
+      <slot v-for="item in list" :item="item">{{item}}</slot>
     </template>
     <ul v-else-if="type === 'unordered'">
       <li v-for="item in list"><slot :item="item">{{item}}</slot></li>

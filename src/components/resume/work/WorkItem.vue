@@ -22,7 +22,6 @@
     </ul>
   </div>
 </template>
-
 <script lang="ts">
 import ExternalLink, { ExternalLinkObject } from '@/components/resume/ExternalLink.vue'
 import Icon, { IconObject } from '@/components/resume/Icon.vue'

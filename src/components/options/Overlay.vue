@@ -12,6 +12,7 @@ import Component from 'vue-class-component'
 @Component
 export default class Overlay extends Vue {
   public text: string = ''
+  public error: string = ''
 
   public created() {
     axios.get('resume.yaml').then((response) => {
@@ -21,7 +22,12 @@ export default class Overlay extends Vue {
   }
 
   public processYaml() {
-    this.$store.commit('setResume', jsyaml.load(this.text).resume)
+    try {
+      const jsonResume = jsyaml.safeLoad(this.text).resume
+      this.$store.commit('setResume', jsonResume)
+    } catch (error) {
+      this.error = error
+    }
   }
 }
 </script>

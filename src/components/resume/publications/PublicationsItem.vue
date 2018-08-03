@@ -9,7 +9,6 @@
 </template>
 
 <script lang="ts">
-import Item from '@/classes/Item'
 import ExternalLink, { ExternalLinkObject } from '@/components/resume/ExternalLink.vue'
 import Organisation, { OrganisationObject } from '@/components/resume/Organisation.vue'
 import { Component, Prop, Vue } from 'vue-property-decorator'

@@ -13,8 +13,7 @@ keywords: &keywords
 # external link structure
 ## has two types:
 # website: ""
-external-link: &external-link
-            # prefixes an icon leave empty to hide
+external-link: &external-link # prefixes an icon leave empty to hide
   type : "" # link | github | linkedin - any fontawesome icon eg: link
   label: "" # Display name eg: stardis.blue
   url: "" # eg: https://stardis.blue
@@ -42,7 +41,8 @@ resume:
 
   # Skill List
   skills:
-    - name: "" # eg: Web application
+    - print: bool # true or false
+      name: "" # eg: Web application
       summary: "" # eg: related to web works
       value: # can be ommited
         rating: 0 # mastery from 0 to 10 eg: 8
@@ -53,7 +53,8 @@ resume:
   work:
     title: "" # for translation easing purpose, leave blank for default
     list:
-      - type: "" # "work" by default but can be "student project" or "thesis"
+      - print: bool # true or false
+        type: "" # "work" by default but can be "student project" or "thesis"
         title: ""
         summary: ""
         company: *company # where did you work
@@ -74,7 +75,8 @@ resume:
   education:
     title: "" # for translation easing purpose, can be omitted
     list:
-      - type: "" # "course" by default but can be anything else like "formation"
+      - print: bool # true or false
+        type: "" # "course" by default but can be anything else like "formation"
         institution: "" # eg: university
         area: "" # eg: "Computer Science"
         studyType: "" # eg: "Master"
@@ -88,7 +90,8 @@ resume:
   languages:
     title: "" # for translation easing purpose, can be omitted
     list:
-      - language: "" # eg: French
+      - print: bool # true or false
+        language: "" # eg: French
         value: 0 # mastery from 0 to 10 eg: 8
         label: "" # mastery label eg: fluent
 
@@ -103,17 +106,17 @@ resume:
     #     name: "" # eg: chess
     list:
       - "" # eg: chess
-  
-  references: 
+
+  references:
     - name: "",
       reference: ""
 
-  awards: 
+  awards:
     - title: ""
       summary: ""
       date: "" #yyyy-mm-dd
       awarder: *company
-      
+
   publications:
     - name: ""
       summary: ""

@@ -1,7 +1,10 @@
 import store from '@/store'
 import { formatDate } from '@/utils/Date'
+import moment from 'moment'
 import Vue from 'vue'
 import App from './App.vue'
+
+moment.locale('fr')
 
 Vue.config.productionTip = false
 

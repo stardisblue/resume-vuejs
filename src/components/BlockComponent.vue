@@ -1,10 +1,8 @@
-<template>
-  <section class="section">
-    <title-component :title="title"/>
-    <div class='content'>
-      <slot>TODO CONTENT</slot>
-    </div>
-  </section>
+<template lang="pug">
+  section.section
+    TitleComponent(:title="title")
+    .content(class="ma1")
+      slot TODO CONTENT
 </template>
 <script lang="ts">
 import Block from '@/classes/Block'

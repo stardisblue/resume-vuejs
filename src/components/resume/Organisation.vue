@@ -1,5 +1,5 @@
 <template>
-    <div class="organisation" >
+    <div class="r_organisation">
       <template v-if="organisationIsString">{{organisation}}</template>
       <template v-else>
         <div class="name">{{organisation.name}}</div>

@@ -3,12 +3,14 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+export const SET_RESUME = 'setResume'
+
 export default new Vuex.Store({
   state: {
     resume: null,
   },
   mutations: {
-    setResume(state, obj) {
+    [SET_RESUME](state, obj) {
       state.resume = obj
     },
   },

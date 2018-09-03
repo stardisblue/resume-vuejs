@@ -1,8 +1,8 @@
 <template>
-  <div class="languages-item">
-    <div class="language">{{language}}</div>
-    <div class="value">{{value}}</div>
-    <div class="label">{{label}}</div>
+  <div class="r--languages-item">
+    <div class="r--language">{{language}}</div>
+    <div class="r--value">{{value}}</div>
+    <div class="r--label">{{label}}</div>
   </div>
 </template>
 

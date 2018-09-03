@@ -1,5 +1,5 @@
 <template>
-  <font-awesome-icon :icon="computedIcon"/>
+  <font-awesome-icon :icon="computedIcon" :size="size"/>
 </template>
 
 <script lang="ts">
@@ -14,6 +14,8 @@ export interface IconObject {
 @Component
 export default class Icon extends Vue {
   @Prop() private icon!: string | IconObject
+
+  @Prop() private size?: string
 
   get computedIcon() {
     return typeof this.icon === 'string' ? this.icon : [this.icon.prefix, this.icon.iconName]

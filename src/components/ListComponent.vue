@@ -3,10 +3,10 @@
     <template v-if="!type">
       <slot v-for="item in list" :item="item">{{item}}</slot>
     </template>
-    <ul v-else-if="type === 'unordered'">
+    <ul v-else-if="type === 'unordered'" :class="classes">
       <li v-for="item in list"><slot :item="item">{{item}}</slot></li>
     </ul>
-    <ol v-else >
+    <ol v-else :class="classes" >
       <li v-for="item in list"><slot :item="item">{{item}}</slot></li>
     </ol>
   </block-component>
@@ -25,5 +25,8 @@ export default class ListComponent extends BlockList {
     validator: (value) => ['ordered', 'unordered'].indexOf(value) !== -1,
   })
   private type?: string
+
+  @Prop()
+  private classes?: string
 }
 </script>

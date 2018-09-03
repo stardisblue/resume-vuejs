@@ -1,12 +1,9 @@
-<template >
-  <div v-if='itemIsString' class="iterests-item">
-    {{item}}
-  </div>
-  <div v-else class="iterests-item">
-    <div v-if="item.type" class="type" >{{item.type}}</div>
-    <icon :icon="item.icon"/>
-    <div class="name">{{item.name}}</div>
-  </div>
+<template lang="pug">
+  li.r--interest(v-if='itemIsString') {{item}}
+  li.r--interest(v-else)
+    .r--type(v-if="item.type") {{item.type}}
+    icon(:icon="item.icon")
+    .r--name {{item.name}}
 </template>
 
 

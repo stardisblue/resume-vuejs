@@ -1,10 +1,8 @@
-<template>
-  <block-component v-if="listIsString" class="interests" :title="title">
-    {{list}}
-  </block-component>
-  <list-component  v-else class="interests" :title="title" :list="list" type="unordered">
-    <interests-item slot-scope="{item}" :item="item"/>
-  </list-component>
+<template lang="pug">
+  BlockComponent(class="r--interests" :title="title")
+    template(v-if="listIsString") {{list}}
+    ul(v-else class="list")
+      InterestsItem(v-for="item in list" :key="item" :item="item" class="")
 </template>
 <script lang="ts">
 import BlockList from '@/classes/BlockList'

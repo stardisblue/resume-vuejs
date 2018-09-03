@@ -1,15 +1,12 @@
-<template>
-  <div class="skills-item">
-    <div class="name">{{name}}</div>
-    <div class="summary">{{summary}}</div>
-    <div v-if="value" class="value">
-      <div class="rating">{{value.rating}}</div>
-      <div class="label">{{value.label}}</div>
-    </div>
-    <ul v-if="keywords" class="keywords">
-      <li v-for="keyword in keywords" :key="keyword">{{keyword}}</li>
-    </ul>
-  </div>
+<template lang="pug">
+  .r--skill.mb1
+    h3.r--name(class="f5 b dib mb1") {{name}} #[small.normal.f6(v-if="summary") {{summary}}]
+    .r--value(v-if="value")
+      .r--rating {{value.rating}}
+      .r--label {{value.label}}
+    ul.r--keywords(v-if="keywords" class="list f7 code")
+      li.r--keyword(v-for="keyword in keywords" :key="keyword" class="dib ma1 ph1 bg-washed-blue") {{keyword}}
+
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'

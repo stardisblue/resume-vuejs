@@ -1,10 +1,9 @@
-<template>
-  <div class="external-link">
-    <a v-if="linkIsString" :href="link">{{link}} </a>
-    <a v-else :href="link.url">
-      <icon :icon="link.type"/>{{link.label}}
-    </a>
-  </div>
+<template lang="pug">
+  .r--external-link.code
+    a(v-if="linkIsString" :href="link" class="link underline-hover") {{link}}
+    a(v-else :href="link.url" class="link underline-hover")
+      icon(:icon="link.type" class="black")
+      span(class="pl1") {{link.label}}
 </template>
 
 <script lang="ts">

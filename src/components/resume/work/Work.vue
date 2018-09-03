@@ -1,5 +1,5 @@
 <template>
-  <list-component :title="title" :list="list" class="work">
+  <list-component :title="title" :list="list" class="r_work">
     <work-item slot-scope="{ item }" v-bind="item"/>
   </list-component>
 </template>

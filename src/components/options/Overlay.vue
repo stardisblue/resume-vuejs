@@ -4,6 +4,7 @@
   </div>
 </template>
 <script lang="ts">
+import { SET_RESUME } from '@/store'
 import axios from 'axios'
 import jsyaml from 'js-yaml'
 import Vue from 'vue'
@@ -24,7 +25,7 @@ export default class Overlay extends Vue {
   public processYaml() {
     try {
       const jsonResume = jsyaml.safeLoad(this.text).resume
-      this.$store.commit('setResume', jsonResume)
+      this.$store.commit(SET_RESUME, jsonResume)
     } catch (error) {
       this.error = error
     }

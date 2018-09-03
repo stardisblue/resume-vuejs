@@ -1,25 +1,42 @@
-<template>
-  <div class="education-item">
-    <div class="type">{{type}}</div>
-    <div class="institution">{{institution}}</div>
-    <div class="area">{{area}}</div>
-    <div class="study-type">{{studyType}}</div>
-    <div class="summary">{{summary}}</div>
-    <div v-if="startDate" class="start-date">{{startDate | formatDate}}</div>
-    <div v-if="endDate" class="end-date">{{endDate | formatDate}}</div>
-    <div v-if="gpa" class="gpa">{{gpa}}</div>
-    <ul v-if="keywords" class="keywords">
-        <li v-for="keyword in keywords" :key="keyword">{{keyword}}</li>
-    </ul>
-  </div>
+<template lang="pug">
+  article.r--education-item(class="mb1")
+    .r--title-line.cf
+      //- institution
+      .rw--institution(class="cf dib fr r--w10")
+        span.gray |
+        span.r--institution(class="black-60 fr") {{institution}}
+      Calendar(:icon="{prefix: 'far', iconName: 'calendar'}"
+          :startDate="startDate" :endDate="endDate")
+      //- title icon separation
+      icon.r--chevron(icon="chevron-right" size="xs" class="mh1 v-base") 
+      .r--type(v-if="type" class="black-60 dib") {{type}} :&nbsp;
+        |
+        |
+      //- Title
+      h3(class="f5 b dib mv0")
+        span.r--study-type {{studyType}}
+          |
+          |
+        span.r--area {{area}}
+      //- Summary
+      .dib.rw--summary(v-if="summary") &nbsp;- #[span.r--summary {{summary}}]
+    //- GPA
+    .r--gpa(v-if="gpa") {{gpa}}
+    //-
+      Keywords
+    ul.r--keywords(v-if="keywords" class="list f7 code")
+      li.r--keyword(v-for="keyword in keywords" :key="keyword"
+        class="dib black-80 bg-washed-blue ph1 ma1") {{keyword}}
 </template>
 
 <script lang="ts">
+import Calendar from '@/components/resume/Calendar.vue'
+import Icon from '@/components/resume/Icon.vue'
 import * as moment from 'moment'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 export interface EducationItemObject {
-  type: string
+  type?: string
   institution: string
   area: string
   studyType: string
@@ -30,9 +47,11 @@ export interface EducationItemObject {
   keywords?: string[]
 }
 
-@Component
+@Component({
+  components: {Icon, Calendar},
+})
 export default class EducationItem extends Vue implements EducationItemObject {
-  @Prop() public type!: string
+  @Prop() public type?: string
   @Prop() public institution!: string
   @Prop() public area!: string
   @Prop() public studyType!: string
@@ -44,5 +63,7 @@ export default class EducationItem extends Vue implements EducationItemObject {
 }
 </script>
 
-<style>
+<style lang="sass">
+.r--w10
+  min-width: 10rem
 </style>

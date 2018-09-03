@@ -1,7 +1,6 @@
-<template>
-  <list-component class="education" :title="title" :list="list">
-    <education-item slot-scope="{ item }" v-bind="item"/>
-  </list-component>
+<template lang="pug">
+  ListComponent.r--education(:title="title" :list="list")
+    EducationItem(slot-scope="{ item }" v-bind="item")
 </template>
 <script lang="ts">
 import BlockList from '@/classes/BlockList'

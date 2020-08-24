@@ -108,7 +108,7 @@ resume:
       - "" # eg: chess
 
   references:
-    - name: "",
+    - name: ""
       reference: ""
 
   awards:
@@ -122,4 +122,4 @@ resume:
       summary: ""
       releaseDate: "" # yyyy-mm-dd
       publisher: *company
-      website: *website,
+      website: *external-link
